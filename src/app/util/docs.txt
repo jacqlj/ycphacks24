@@ -1,0 +1,91 @@
+Event JSON Format:
+
+{
+  "id": 1,
+  "effects": [
+    {
+      "bias": 0.02,
+      "conditions": [
+        {
+          "locations": [],
+          "attributes": []
+        },
+        {
+          "locations": [],
+          "attributes": []
+        }
+      ]
+    },
+    {
+      "bias": -0.02,
+      "conditions": [
+        {
+          "locations": [],
+          "attributes": []
+        },
+        {
+          "locations": [],
+          "attributes": []
+        }
+      ]
+    }
+  ],
+  "severity": 0.5,
+  "ticker_text": "",
+  "broadcaster_text": ""
+}
+
+Severity Range: 0 -> 1
+Bias Range: -0.02 -> 0.02
+
+Assets Key:
+
+food <- Food
+tech <- Technology
+metals <- Metals
+energy <- Energy
+realestate <- Real Estate
+comms <- Communications/ Utilities
+lux <- Luxury Goods
+staples <- Common Staples
+money <- Money Management
+pharma <- Pharmaceuticals
+
+
+{
+
+    Given this event:
+
+    {Event here}
+
+    1. Give me a short 3 sentence news broadcast of this event
+    2. Given {location} exports {Sectors}, what would be the impact on the following stock sectors (increase or decrease):
+    - food
+    - metals
+    - energy
+    - tech
+    - real estate
+    - communications/ utilities
+    - luxury goods
+    - staple products
+    - money management
+    - pharma
+
+    3. What would be the positive bias (increase or decrease of a single stock market asset) on a scale of -0.02 to 0.02 and what would be the negative?
+
+    4. What is the severity of said event on a scale of 0 to 1?
+
+}
+
+
+
+ASSET JSON Format: 
+
+{
+      "symbol": "NSB",
+      "name": "Yes",
+      "b_price": 1,
+      "location": "rizzland",
+      "attributes":["comms","energy"],
+      "flavor_txt": "Yes"
+    }

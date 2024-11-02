@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* border: 1px solid #fff; */
+}
+
+.container>* {
+  flex-grow: 1;
+}
+
+.top {
+
+  font-size: xx-large;
+  font-weight: bold;
+  padding-left: 10px;
+
+}
+
+.bottomcontainer {
+  display: flex;
+}
+
+.bottom {
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.capitaltext {
+
+  text-align: left;
+  font-weight: bolder;
+
+}
+
+.moneytext {
+
+  text-align: left;
+  font-size: xx-large;
+
+}

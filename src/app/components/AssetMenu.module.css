@@ -1,0 +1,31 @@
+.mode {
+  display: grid;
+  grid: repeat(2, auto) / repeat(4, auto);
+
+  padding: 1rem 1.5rem;
+  background-color: color-mix(in oklch, var(--background), #fff 20%);
+  margin-bottom: 1rem;
+}
+
+.buy,
+.sell {
+  font-weight: bolder;
+}
+
+.category {
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-weight: bolder;
+  border: solid 4px var(--foreground);
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  margin-bottom: 1rem
+}
+
+.category.open {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
+.category i {
+  margin-right: 0.5rem;
+}

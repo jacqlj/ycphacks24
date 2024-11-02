@@ -1,0 +1,1125 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "effects": [
+        {
+          "bias": -0.015,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "comms", "lux", "realestate", "metals"]
+            }
+          ]
+        },
+        {
+          "bias": 0.005,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": ["staples", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.6,
+      "ticker_text": "Hurricane Costco hits Rizzland",
+      "broadcaster_text": "Good evening, Rizzland. Hurricane Costco has just made landfall, bringing destructive winds and heavy rain to our area. Residents are urged to stay indoors and follow safety protocols as emergency services respond to the situation."
+    },
+
+    {
+      "id": 2,
+      "effects": [
+        {
+          "bias": -0.015,
+          "conditions": [
+            {
+              "locations": ["sordland"],
+              "attributes": ["metals", "food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "lux", "realestate", "comms", "tech"]
+            }
+          ]
+        },
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["sordland"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["pharma", "staples"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.8,
+      "ticker_text": "Explosion at Sordlandobyl nuclear plant",
+      "broadcaster_text": "A catastrophic explosion has occurred at the Sordlandobyl nuclear power plant in East Sordland, releasing harmful radioactive gases into the atmosphere. Emergency response teams are rushing to contain the situation and assess the impact on local communities."
+    },
+
+    {
+      "id": 3,
+      "effects": [
+        {
+          "bias": -0.02,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": ["comms", "staples"]
+            }
+          ]
+        },
+
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["metals", "energy", "realestate", "luxury", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.9,
+      "ticker_text": "Rizzland stock market crash",
+      "broadcaster_text": "In a shocking turn of events, the Rizzland stock market has plummeted, with major indices dropping over 20% in a single day, triggering widespread panic among investors. Analysts attribute the crash to a combination of rising interest rates and global economic uncertainties, leaving many wondering about the long-term implications for the economy."
+    },
+
+    {
+      "id": 4,
+      "effects": [
+        {
+          "bias": -0.02,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": ["energy", "lux"]
+            },
+            {
+              "locations": [],
+              "attributes": ["food", "metals", "tech", "realestate", "comms", "money"]
+            }
+          ]
+        },
+
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": ["pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": ["staples"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.7,
+      "ticker_text": "Severe drought hits Kolechia",
+      "broadcaster_text": "A severe drought has devastated agricultural production in Kolechia, threatening food supplies and raising concerns over economic stability. Experts warn that the prolonged dry conditions could lead to increased prices and shortages of essential goods."
+    },
+
+    {
+      "id": 5,
+      "effects": [
+        {
+          "bias": -0.005,
+          "conditions": [
+            {
+              "locations": ["southrizzland"],
+              "attributes": ["food"]
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        },
+
+        {
+          "bias": 0.001,
+          "conditions": [
+            {
+              "locations": ["southrizzland"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["pharma"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.2,
+      "ticker_text": "Moldy fruit found in South Rizzland Tropic Juice store",
+      "broadcaster_text": "In a shocking discovery, moldy fruit was found at the Tropic Juice store in South Rizzland, raising concerns over food safety standards. Local health officials are investigating the incident, urging consumers to be cautious."
+    },
+
+    {
+      "id": 6,
+      "effects": [
+        {
+          "bias": -0.01,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["realestate", "comms", "lux"]
+            }
+          ]
+        },
+
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["pharma", "food"]
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        }
+      ],
+      "severity": 0.6,
+      "ticker_text": "Rizzland balloon fest major disruptions",
+      "broadcaster_text": "A massive balloon release during BALLOONFEST '24 has caused a major disruption, interfering with the USS Neverblue, a U.S. Navy ship. The ship has reportedly crashed into a bridge off the coast of the Brainrot Canal, prompting emergency response efforts."
+    },
+
+    {
+      "id": 7,
+      "effects": [
+        {
+          "bias": -0.01,
+          "conditions": [
+            {
+              "locations": ["artotska"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["lux", "staples"]
+            }
+          ]
+        },
+        {
+          "bias": 0.015,
+          "conditions": [
+            {
+              "locations": ["artotska"],
+              "attributes": ["tech", "metals", "energy"]
+            },
+            {
+              "locations": [],
+              "attributes": ["money", "realestate"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.4,
+      "ticker_text": "Artstotska unveils the world's first flying car!",
+      "broadcaster_text": "Exciting news from Arstotska as an engineer has unveiled the world’s first flying car, a groundbreaking innovation that promises to revolutionize personal transportation. The invention has garnered international attention, sparking discussions about future urban planning and regulatory frameworks. Experts predict this could mark a new era in mobility and technology."
+    },
+
+    {
+      "id": 8,
+      "effects": [
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["sordland"],
+              "attributes": ["energy", "metals"]
+            },
+            {
+              "locations": [],
+              "attributes": ["tech"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.6,
+      "ticker_text": "Sordland discovers purplecream uranium!",
+      "broadcaster_text": "In a significant scientific breakthrough, Cyrean Intelligence has discovered a new variant of uranium known as Purplecream uranium in Sordland. This discovery could have profound implications for energy production and geopolitical dynamics, raising concerns and interest among global powers. Authorities are closely monitoring developments regarding this rare resource."
+    },
+
+    {
+      "id": 9,
+      "effects": [
+        {
+          "bias": -0.01,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": ["food"]
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        },
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["pharma"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.3,
+      "ticker_text": "A scientist in Sealand invents a new weightloss medication called Richie!",
+      "broadcaster_text": "A Sealand scientist has developed an innovative weight loss medication named 'Richie,' now available in liquid form. This breakthrough is expected to transform weight management options and could lead to a surge in demand for the product. Health experts are eager to see its impact on the wellness industry."
+    },
+
+    {
+      "id": 10,
+      "effects": [
+        {
+          "bias": -0.015,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": ["lux"]
+            },
+            {
+              "locations": [],
+              "attributes": ["tech", "money", "realestate"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.5,
+      "ticker_text": "A tech company in Kolechia suffers cybersecurity attack!",
+      "broadcaster_text": "Kolechia faces a major setback as its tech company 'Slate' suffers a significant cybersecurity attack, potentially compromising sensitive data and disrupting operations. The attack raises alarms about the vulnerability of digital infrastructures in the tech sector."
+    },
+
+    {
+      "id": 11,
+      "effects": [
+        {
+          "bias": -0.015,
+          "conditions": [
+            {
+              "locations": ["jorgaunion"],
+              "attributes": ["money", "pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": ["food", "energy", "lux", "staples", "realestate"]
+            }
+          ]
+        },
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["jorgaunion"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["metals"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.7,
+      "ticker_text": "Jorga Union's currency has declined in value!",
+      "broadcaster_text": "The Jorga Union is grappling with a troubling economic trend as its currency value has decreased significantly. Analysts attribute this decline to ongoing market instability and trade tensions. Economists are warning of potential ramifications for trade and investment in the region."
+    },
+
+    {
+      "id": 12,
+      "effects": [
+        {
+          "bias": -0.02,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["realestate", "tech", "energy", "metals", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.5,
+      "ticker_text": "The Federal Risserve Bank in Rizzland raises interest rates!",
+      "broadcaster_text": "The Federal Rizzerve Bank in Rizzland has announced a raise in interest rates, a move aimed at curbing inflation and stabilizing the economy. This decision is expected to affect borrowing costs and consumer spending. Financial markets are reacting cautiously as investors assess the long-term implications."
+    },
+
+    {
+      "id": 13,
+      "effects": [
+        {
+          "bias": -0.015,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": []
+            },
+            {
+              "locations": ["jorgaunion"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "realestate", "metals"]
+            }
+          ]
+        },
+        {
+          "bias": 0.008,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": ["money"]
+            },
+            {
+              "locations": ["jorgaunion"],
+              "attributes": ["money"]
+            },
+            {
+              "locations": [],
+              "attributes": ["comms"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.5,
+      "ticker_text": "There is a trade dispute between Sealand and Jorga Union!",
+      "broadcaster_text": "Tensions rise as Sealand and the Jorga Union enter a trade dispute over steel importation, potentially disrupting bilateral trade relations. Both nations are at odds over tariffs and regulations, with implications for industries reliant on steel. Diplomatic efforts are underway to resolve the conflict."
+    },
+    {
+      "id": 14,
+      "effects": [
+        {
+          "bias": 0.015,
+          "conditions": [
+            {
+              "locations": ["southrizzland"],
+              "attributes": ["metals", "staples", "food"]
+            },
+            {
+              "locations": ["cyrea"],
+              "attributes": ["staples", "food", "tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "lux", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.2,
+      "ticker_text": "South Rizzland, Cyrea sign peace treaty",
+      "broadcaster_text": "In a hopeful turn of events, South Rizzland and Cyrea have signed a peace treaty, marking a significant step towards regional stability. The agreement is expected to foster economic collaboration and bolster trade between the two nations. Leaders from both countries are optimistic about a more peaceful future."
+    },
+    {
+      "id": 15,
+      "effects": [
+        {
+          "bias": 0.01,
+          "conditions": [
+            {
+              "locations": ["sordland"],
+              "attributes": ["metals", "energy", "food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["tech", "realestate", "money", "lux", "pharma"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.2,
+      "ticker_text": "Sordland sees 2.7% increase in GDP",
+      "broadcaster_text": "The Gross Domestic Product (GDP) expanded 2.7% in the fourth quarter of 2024 over the previous quarter. Economic activity in Sordland was considerably stronger than expected, boosted by a strong consumer and government spending."
+    },
+    {
+      "id": 16,
+      "effects": [
+        {
+          "bias": -0.004,
+          "conditions": [
+            {
+              "locations": [],
+              "attributes": ["tech", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.09,
+      "ticker_text": "TalkGPT officially shuts down",
+      "broadcaster_text": "TalkGPT creator Will Willis announces that he is shutting the app and will remove it from all app stores. Willis said he shut down TalkGPT because it endorsed cheating and it was causing him stress."
+    },
+    {
+      "id": 17,
+      "effects": [
+        {
+          "bias": 0.016,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": ["money"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "metals"]
+            }
+          ]
+        },
+        {
+          "bias": -0.01,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": ["food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["realestate", "tech", "lux"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.6,
+      "ticker_text": "Unemployment rates reach record high in Sealand",
+      "broadcaster_text": "The unemployment rate in Sealand has reportedly reached a record high of 12.6%. This alarming figure reflects significant economic challenges facing Sealand as businesses struggle to recover from the impact of recent crises. Economists are expressing deep concern as jobs losses continue to mountain across various sectors, with the hardest hit industries being hospitality, retail, and manufacturing."
+    },
+    {
+      "id": 18,
+      "effects": [
+        {
+          "bias": 0.007,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["pharma", "food"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.33,
+      "ticker_text": "Mulberry Cable wins multibillion dollar contract for F-469 figher jet",
+      "broadcaster_text": "The Rizzland Army has awarded Mulberry Cable $2.2 billion in two contracts for the production of the F-69 fighter jet. The contract is expected to bolster the company's position in the defense sector and create thousands of jobs."
+    },
+    {
+      "id": 19,
+      "effects": [
+        {
+          "bias": -0.017,
+          "conditions": [
+            {
+              "locations": ["arstotska"],
+              "attributes": ["energy", "metals"]
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        },
+        {
+          "bias": 0.02,
+          "conditions": [
+            {
+              "locations": [],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        }
+      ],
+      "severity": 0.7,
+      "ticker_text": "Energy scandal rocks Arstotska",
+      "broadcaster_text": "The Department of Energy in Arstotska is currently embroiled in a energy scandal. A whistleblower has confirmed that the climate-friendly fuel initiative has been linked carcinogenic substances into the atmosphere, raising serious public health concerns. Officials are under intense scrutiny as they face allegations of covering up the dangerous effects of the very fuels they promoted as safe and sustainable."
+    },
+    {
+      "id": 20,
+      "effects": [
+        {
+          "bias": -0.006,
+          "conditions": [
+            {
+              "locations": ["southrizzland"],
+              "attributes": ["food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "comms"]
+            }
+          ]
+        },
+        {
+          "bias": 0.003,
+          "conditions": [
+            {
+              "locations": ["southrizzland"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["money", "realestate", "pharma"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.3,
+      "ticker_text": "Animals in South Rizzlandian farm die from oil-contaminated water",
+      "broadcaster_text": "Tragedy strikes as dozens of farm animals have died after drinking oil-contaminated water in a rural area in South Rizzland, raising concerns about the safety of local resources. Officials are investigating the source of the contamination as residents fear further impact on livestock and crops."
+    },
+    {
+      "id": 21,
+      "effects": [
+        {
+          "bias": -0.009,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": ["energy", "lux"]
+            },
+            {
+              "locations": [],
+              "attributes": ["metals", "money"]
+            }
+          ]
+        },
+        {
+          "bias": 0.0005,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["staples"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.41,
+      "ticker_text": "Gold Heist at Kolechia Airport",
+      "broadcaster_text": "A daring $35 million gold heist has rocked the Kolechia International Airport, with thieves making off with a massive haul of gold bars in a high-stakes robbery. Authorities are intensifying their investigation as they search for clues and suspects in what is being called one of the largest airport heists in recent history."
+    },
+    {
+      "id": 22,
+      "effects": [
+        {
+          "bias": 0.011,
+          "conditions": [
+            {
+              "locations": ["sealand"],
+              "attributes": ["money", "lux"]
+            },
+            {
+              "locations": [],
+              "attributes": ["tech", "energy", "metals", "staples"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.5,
+      "ticker_text": "Marsh completes successful GreenScreen acquisition",
+      "broadcaster_text": "Beta CEO Randy Marsh has successfully completed the acquisition of the GreenScreen Energy House, marking a strategic shift into sustainable power solutions. Industry experts anticipate this move will drive innovation and transform energy technology, with positive impacts expected across both sectors."
+    },
+    {
+      "id": 23,
+      "effects": [
+        {
+          "bias": -0.007,
+          "conditions": [
+            {
+              "locations": ["cyrea"],
+              "attributes": ["food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.39,
+      "ticker_text": "Cargo ship crashes in Cyrea bridge",
+      "broadcaster_text": "A cargo ship containing livestock has crashed into a bridge in Cyrea today, causing significant structural damage and halting traffic in the area. Tragically, there are no survivors among the crew or the animals onboard. Emergency responders are on the scene, working to contain the situation."
+    }
+  ],
+  "assets": [
+    {
+      "category": "stock",
+      "symbol": "RTK",
+      "name": "RizzTech Innovations",
+      "b_price": 25,
+      "sigma": 0.01,
+      "location": "Rizzland",
+      "attributes": ["tech", "pharma", "food"],
+      "flavor_txt": "RizzTech Innovations specializes in cutting-edge technology solutions, focusing on health tech and food production automation."
+    },
+    {
+      "category": "stock",
+      "symbol": "FDP",
+      "name": "FreshDelight Produce",
+      "b_price": 18,
+      "sigma": 0.01,
+      "location": "Rizzland",
+      "attributes": ["food", "staples"],
+      "flavor_txt": "FreshDelight Produce provides organic fruits and vegetables to local markets, emphasizing sustainability in agriculture."
+    },
+    {
+      "category": "stock",
+      "symbol": "PHR",
+      "name": "PharmaHeal Corp",
+      "b_price": 30,
+      "sigma": 0.012,
+      "location": "Rizzland",
+      "attributes": ["pharma"],
+      "flavor_txt": "PharmaHeal Corp is at the forefront of biopharmaceuticals, developing innovative treatments for chronic diseases."
+    },
+    {
+      "category": "stock",
+      "symbol": "JMT",
+      "name": "Jorga Money Technologies",
+      "b_price": 22,
+      "sigma": 0.01,
+      "location": "Jorga Union",
+      "attributes": ["money", "tech"],
+      "flavor_txt": "Jorga Money Technologies revolutionizes personal finance management through innovative software solutions."
+    },
+    {
+      "category": "stock",
+      "symbol": "MED",
+      "name": "JorgaMed Pharmaceuticals",
+      "b_price": 35,
+      "sigma": 0.012,
+      "location": "Jorga Union",
+      "attributes": ["pharma", "tech"],
+      "flavor_txt": "JorgaMed Pharmaceuticals specializes in developing advanced medications, focusing on affordability and accessibility."
+    },
+    {
+      "category": "stock",
+      "symbol": "STK",
+      "name": "StapleTech Inc.",
+      "b_price": 15,
+      "sigma": 0.01,
+      "location": "Jorga Union",
+      "attributes": ["staples", "tech"],
+      "flavor_txt": "StapleTech Inc. creates smart kitchen appliances aimed at simplifying food preparation and cooking."
+    },
+    {
+      "category": "stock",
+      "symbol": "EGO",
+      "name": "EnergyGlobal",
+      "b_price": 28,
+      "sigma": 0.012,
+      "location": "Artotska",
+      "attributes": ["energy"],
+      "flavor_txt": "EnergyGlobal leads in renewable energy solutions, focusing on solar and wind power to reduce carbon footprints."
+    },
+    {
+      "category": "stock",
+      "symbol": "MTC",
+      "name": "Metallurgic Tech",
+      "b_price": 27,
+      "sigma": 0.012,
+      "location": "Artotska",
+      "attributes": ["metals"],
+      "flavor_txt": "Metallurgic Tech specializes in advanced metal alloys for aerospace and automotive applications."
+    },
+    {
+      "category": "stock",
+      "symbol": "FGR",
+      "name": "AgroFresh Foods",
+      "b_price": 20,
+      "sigma": 0.01,
+      "location": "Artotska",
+      "attributes": ["food", "staples"],
+      "flavor_txt": "AgroFresh Foods sources and processes agricultural products, ensuring quality and freshness in every bite."
+    },
+    {
+      "category": "stock",
+      "symbol": "SRM",
+      "name": "South Rizzland Mining",
+      "b_price": 24,
+      "sigma": 0.012,
+      "location": "South Rizzland",
+      "attributes": ["metals", "energy"],
+      "flavor_txt": "South Rizzland Mining focuses on sustainable mining practices while supplying key minerals for global industries."
+    },
+    {
+      "category": "stock",
+      "symbol": "SFC",
+      "name": "Sordland Foods Corp",
+      "b_price": 19,
+      "sigma": 0.01,
+      "location": "Sordland",
+      "attributes": ["food", "staples"],
+      "flavor_txt": "Sordland Foods Corp is dedicated to producing high-quality staple foods while championing local farmers."
+    },
+    {
+      "category": "stock",
+      "symbol": "MET",
+      "name": "Sordland Metals Ltd.",
+      "b_price": 32,
+      "sigma": 0.0012,
+      "location": "Sordland",
+      "attributes": ["metals"],
+      "flavor_txt": "Sordland Metals Ltd. supplies various metal products to the construction and manufacturing sectors."
+    },
+    {
+      "category": "stock",
+      "symbol": "SOL",
+      "name": "SolarWave Energy",
+      "b_price": 26,
+      "sigma": 0.0092,
+      "location": "Sordland",
+      "attributes": ["energy"],
+      "flavor_txt": "SolarWave Energy develops solar panel technology aimed at making renewable energy accessible for all."
+    },
+    {
+      "category": "stock",
+      "symbol": "CTY",
+      "name": "CyreaTech Solutions",
+      "b_price": 23,
+      "sigma": 0.012,
+      "location": "Cyrea",
+      "attributes": ["tech", "staples"],
+      "flavor_txt": "CyreaTech Solutions designs smart home technologies that integrate seamlessly with daily living."
+    },
+    {
+      "category": "stock",
+      "symbol": "FST",
+      "name": "Cyrea Fresh Staples",
+      "b_price": 15,
+      "sigma": 0.01,
+      "location": "Cyrea",
+      "attributes": ["food", "staples"],
+      "flavor_txt": "Cyrea Fresh Staples focuses on delivering fresh produce and grocery essentials to urban areas."
+    },
+    {
+      "category": "stock",
+      "symbol": "CYP",
+      "name": "Cyrea Pharma Labs",
+      "b_price": 34,
+      "sigma": 0.0092,
+      "location": "Cyrea",
+      "attributes": ["pharma"],
+      "flavor_txt": "Cyrea Pharma Labs is dedicated to research and development of innovative healthcare solutions."
+    },
+    {
+      "category": "stock",
+      "symbol": "KLE",
+      "name": "Kolechia Luxuries",
+      "b_price": 40,
+      "sigma": 0.013,
+      "location": "Kolechia",
+      "attributes": ["lux", "pharma"],
+      "flavor_txt": "Kolechia Luxuries offers high-end consumer products, ranging from designer items to exclusive skincare lines."
+    },
+    {
+      "category": "stock",
+      "symbol": "ENER",
+      "name": "Kolechia Energy Corp",
+      "b_price": 29,
+      "sigma": 0.0092,
+      "location": "Kolechia",
+      "attributes": ["energy"],
+      "flavor_txt": "Kolechia Energy Corp specializes in innovative energy solutions, focusing on eco-friendly technologies."
+    },
+    {
+      "category": "stock",
+      "symbol": "LUX",
+      "name": "Luxury Essence",
+      "b_price": 50,
+      "sigma": 0.013,
+      "location": "Kolechia",
+      "attributes": ["lux"],
+      "flavor_txt": "Luxury Essence crafts premium goods, ensuring quality and elegance in every product they offer."
+    },
+    {
+      "category": "stock",
+      "symbol": "MNY",
+      "name": "Sealand Money Group",
+      "b_price": 21,
+      "sigma": 0.01,
+      "location": "Sealand",
+      "attributes": ["money"],
+      "flavor_txt": "Sealand Money Group provides innovative financial services, helping clients manage wealth effectively."
+    },
+    {
+      "category": "stock",
+      "symbol": "LUXE",
+      "name": "Sealand Luxuries Inc.",
+      "b_price": 45,
+      "sigma": 0.013,
+      "location": "Sealand",
+      "attributes": ["lux"],
+      "flavor_txt": "Sealand Luxuries Inc. specializes in exclusive luxury goods, focusing on handcrafted items for discerning consumers."
+    },
+    {
+      "category": "stock",
+      "symbol": "FOO",
+      "name": "Sealand Culinary Arts",
+      "b_price": 22,
+      "sigma": 0.01,
+      "location": "Sealand",
+      "attributes": ["food"],
+      "flavor_txt": "Sealand Culinary Arts promotes gourmet food experiences through restaurants and specialty food products."
+    },
+    {
+      "category": "stock",
+      "symbol": "FMD",
+      "name": "FreshMed Distributors",
+      "b_price": 16,
+      "sigma": 0.01,
+      "location": "Rizzland",
+      "attributes": ["food", "staples"],
+      "flavor_txt": "FreshMed Distributors ensures the supply of fresh medical and dietary food products to healthcare facilities."
+    },
+    {
+      "category": "stock",
+      "symbol": "AGR",
+      "name": "Agritech Solutions",
+      "b_price": 27,
+      "sigma": 0.012,
+      "location": "Artotska",
+      "attributes": ["tech", "food"],
+      "flavor_txt": "Agritech Solutions develops innovative farming technologies to boost agricultural productivity sustainably."
+    },
+    {
+      "category": "stock",
+      "symbol": "METL",
+      "name": "MetalWorks Inc.",
+      "b_price": 33,
+      "sigma": 0.012,
+      "location": "South Rizzland",
+      "attributes": ["metals"],
+      "flavor_txt": "MetalWorks Inc. is a leading manufacturer of precision metal components for various industries."
+    },
+    {
+      "category": "stock",
+      "symbol": "STN",
+      "name": "StapleTech Network",
+      "b_price": 24,
+      "sigma": 0.012,
+      "location": "South Rizzland",
+      "attributes": ["staples", "food"],
+      "flavor_txt": "StapleTech Network provides essential food products and staple goods to consumers and businesses alike."
+    },
+    {
+      "category": "stock",
+      "symbol": "SOIL",
+      "name": "Sustainable Soil Corp",
+      "b_price": 19,
+      "sigma": 0.01,
+      "location": "South Rizzland",
+      "attributes": ["food"],
+      "flavor_txt": "Sustainable Soil Corp focuses on enhancing soil health through organic products and practices."
+    },
+    {
+      "category": "stock",
+      "symbol": "CIR",
+      "name": "CyrEnergy Corp",
+      "b_price": 25,
+      "sigma": 0.0092,
+      "location": "Cyrea",
+      "attributes": ["energy"],
+      "flavor_txt": "CyrEnergy Corp specializes in energy-efficient solutions, leading the charge in renewable energy adoption."
+    },
+    {
+      "category": "stock",
+      "symbol": "PHC",
+      "name": "Pharmaceutical Corp",
+      "b_price": 38,
+      "sigma": 0.012,
+      "location": "Cyrea",
+      "attributes": ["pharma"],
+      "flavor_txt": "Pharmaceutical Corp develops life-saving drugs with a focus on patient-centered healthcare."
+    },
+    {
+      "category": "stock",
+      "symbol": "XLR",
+      "name": "Kolechia Express Logistics",
+      "b_price": 22,
+      "sigma": 0.006,
+      "location": "Kolechia",
+      "attributes": ["comms"],
+      "flavor_txt": "Kolechia Express Logistics offers reliable logistics solutions, ensuring timely delivery of goods."
+    },
+    {
+      "category": "stock",
+      "symbol": "MST",
+      "name": "Minescape Tech",
+      "b_price": 30,
+      "sigma": 0.012,
+      "location": "Sordland",
+      "attributes": ["metals", "energy"],
+      "flavor_txt": "Minescape Tech specializes in innovative technologies for mining and resource extraction."
+    },
+    {
+      "category": "stock",
+      "symbol": "TECH",
+      "name": "TechNova Solutions",
+      "b_price": 40,
+      "sigma": 0.013,
+      "location": "Jorga Union",
+      "attributes": ["tech"],
+      "flavor_txt": "TechNova Solutions develops software solutions that streamline business processes across various sectors."
+    },
+    {
+      "category": "stock",
+      "symbol": "INNOV",
+      "name": "Innovative Foods Ltd.",
+      "b_price": 18,
+      "sigma": 0.006,
+      "location": "Artotska",
+      "attributes": ["food"],
+      "flavor_txt": "Innovative Foods Ltd. focuses on developing new food products that cater to health-conscious consumers."
+    },
+    {
+      "category": "stock",
+      "symbol": "CLOU",
+      "name": "CloudCure Pharma",
+      "b_price": 35,
+      "sigma": 0.008,
+      "location": "Jorga Union",
+      "attributes": ["pharma"],
+      "flavor_txt": "CloudCure Pharma is dedicated to pioneering cloud-based health solutions for modern medical practices."
+    },
+    {
+      "category": "stock",
+      "symbol": "GRND",
+      "name": "Green Energy Solutions",
+      "b_price": 29,
+      "sigma": 0.007,
+      "location": "Kolechia",
+      "attributes": ["energy"],
+      "flavor_txt": "Green Energy Solutions focuses on providing cutting-edge renewable energy technologies for residential and commercial use."
+    },
+    {
+      "category": "stock",
+      "symbol": "FASH",
+      "name": "Fashion Luxe Co.",
+      "b_price": 50,
+      "sigma": 0.007,
+      "location": "Sealand",
+      "attributes": ["lux"],
+      "flavor_txt": "Fashion Luxe Co. offers premium fashion products and bespoke designs for the luxury market."
+    },
+    {
+      "category": "stock",
+      "symbol": "MFL",
+      "name": "MetalFlex Industries",
+      "b_price": 31,
+      "sigma": 0.01,
+      "location": "Artotska",
+      "attributes": ["metals"],
+      "flavor_txt": "MetalFlex Industries specializes in flexible metal manufacturing solutions for various industrial applications."
+    },
+    {
+      "category": "crypto",
+      "symbol": "RZC",
+      "name": "RizzCoin",
+      "b_price": 1.25,
+      "sigma": 0.03,
+      "location": "",
+      "attributes": ["money", "tech"],
+      "flavor_txt": "RizzCoin is designed for seamless transactions within the digital economy, facilitating fast and secure payments for various goods and services."
+    },
+    {
+      "category": "crypto",
+      "symbol": "ZAZ",
+      "name": "ZazzCoin",
+      "b_price": 1.5,
+      "sigma": 0.03,
+      "location": "Rizzland",
+      "attributes": ["money", "lux"],
+      "flavor_txt": "ZazzCoin offers enhanced features for luxury transactions, making it the preferred choice for high-end purchases in the digital marketplace."
+    },
+    {
+      "category": "crypto",
+      "symbol": "BIZZ",
+      "name": "BizzCoin",
+      "b_price": 1.75,
+      "sigma": 0.03,
+      "location": "Rizzland",
+      "attributes": ["money", "business"],
+      "flavor_txt": "BizzCoin is tailored for small and medium-sized enterprises, streamlining payments and enhancing business operations in the digital realm."
+    },
+    {
+      "category": "commodities",
+      "symbol": "FOOD",
+      "name": "Food Index",
+      "b_price": 3.12,
+      "sigma": 0.003,
+      "location": "",
+      "attributes": ["food"],
+      "flavor_txt": "The Food Index is a ticker that tracks the overall health of the agricultural industry worldwide."
+    },
+    {
+      "category": "commodities",
+      "symbol": "REM",
+      "name": "Rare Earth Metal Index",
+      "b_price": 32,
+      "sigma": 0.002,
+      "location": "",
+      "attributes": ["metals"],
+      "flavor_txt": "The Rare Earth Metal index is a ticker that forecasts the current/future status of the rare earth metal industry globally."
+    },
+    {
+      "category": "commodities",
+      "symbol": "GENI",
+      "name": "Global Energy Index",
+      "b_price": 83,
+      "sigma": 0.005,
+      "location": "",
+      "attributes": ["energy"],
+      "flavor_txt": "The Global Energy Index tracks the cumulative health of energy corporations globally."
+    }
+  ]
+}
