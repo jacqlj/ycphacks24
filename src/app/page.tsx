@@ -1,7 +1,7 @@
 'use client';
 
-import { GameAsset, GameAssetTemplate, GameEvent, GameState } from './util/structs';
-import { format_number, get_date_from_time, init_price_history_24h } from './util/functions';
+import { GameAsset, GameAssetTemplate, GameEvent } from './util/structs';
+import { format_number, get_date_from_time, init_price_history_24h, step_time } from './util/functions';
 import { useEffect, useMemo, useState } from 'react';
 
 import AssetMenu from './components/AssetMenu/AssetMenu';
@@ -20,8 +20,11 @@ export default function Home() {
 
   // game state
   const [time, setTime] = useState(typeof window !== 'undefined' ? +(localStorage.getItem('time') ?? 0) : 0);
-  const [playerAssets, setPlayerAssets] = useState<GameAsset[]>([]);
+
   const [eventHistory, setEventHistory] = useState<GameEvent[]>([]);
+  const [eventQueue, setEventQueue] = useState<GameEvent[]>([]);
+
+  const [playerAssets, setPlayerAssets] = useState<GameAsset[]>([]);
   const [playerCapital, setPlayerCapital] = useState<number>(1000);
   const [playerPortfolio, setPlayerPortfolio] = useState<number>(0);
 
@@ -73,6 +76,7 @@ export default function Home() {
       setTime((time) => time + 1);
 
       // everything goes here
+      // const ev = step_time(eventPool, 106);
 
       localStorage.setItem('time', `${time}`);
     }, 1000);

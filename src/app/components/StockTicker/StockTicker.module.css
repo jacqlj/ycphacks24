@@ -1,10 +1,8 @@
 .ticker {
 
-  width: 6rem;
-  height: 100%;
+  width: 8rem;
+  height: 5rem;
   display: flex;
-  column-gap: 1rem;
-
 
 }
 

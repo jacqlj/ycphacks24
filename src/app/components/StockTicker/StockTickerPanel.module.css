@@ -1,7 +1,29 @@
 .container {
 
   display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
+  margin: 1rem;
+  column-gap: 5rem;
 
+}
 
+.marquee {
+  display: flex;
+  column-gap: 5rem;
+  /* Use flex to lay out items in a row */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+    /* Start from the right */
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* End at the left */
+  }
 }

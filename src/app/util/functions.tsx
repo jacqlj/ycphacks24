@@ -2,19 +2,20 @@ import { GameAsset, GameAssetEffect, GameAssetTemplate, GameEffectCondition, Gam
 
 import { gamma } from 'mathjs';
 
-export function step_time(events: GameEvent[], state: GameState): GameEvent {
+export function step_time(events: GameEvent[], time: number): GameEvent {
   const norm_dist = require('distributions-normal-random');
   norm_dist.seed = Date.now();
 
   // update asset prices
-  state.assets.forEach((asset) => update_asset(asset));
+  //state.assets.forEach((asset) => update_asset(asset));
 
   // update game statistics exposed to player
 
   // summon new event
-  const severity_range = get_probabilistic_event_severity_range();
+  const severity_range = get_probabilistic_event_severity_range(time);
   const ev = spawn_event(events, severity_range);
-  state.assets.forEach((asset) => apply_if_match(asset, ev));
+  //console.log(ev);
+  // state.assets.forEach((asset) => apply_if_match(asset, ev));
 
   // return summoned event for display
   return ev;
@@ -78,17 +79,26 @@ function gamma_dist(x: number, alpha: number, beta: number): number {
 }
 
 // TODO
-function get_probabilistic_event_severity_range(): [number, number] {
-  throw new Error('Function not implemented.');
+function get_probabilistic_event_severity_range(time_elapsed: number): [number, number] {
+  let sev_mod = (time_elapsed % 240) / 290;
+
+  let min = 0 + sev_mod;
+  let max = 0.16 + sev_mod;
+
+  return [min, max];
 }
 
-function spawn_event(events: GameEvent[], severity_range: [number, number]): GameEvent {
+function spawn_event(events: GameEvent[], severity_range: [number, number], time: number): GameEvent | null {
   const rand_idx = () => Math.floor(Math.random() * events.length);
   let ev: GameEvent;
-  do {
-    ev = events[rand_idx()];
-  } while (ev.severity < severity_range[0] || ev.severity > severity_range[1]);
-  return ev;
+  if (time % 168 == 0) {
+    do {
+      ev = events[rand_idx()];
+      console.log();
+    } while (ev.severity < severity_range[0] || ev.severity > severity_range[1]);
+    return ev;
+  }
+  return null;
 }
 
 function apply_if_match(asset: GameAsset, ev: GameEvent): void {
@@ -130,5 +140,5 @@ export function format_number(n: number) {
 }
 
 export function asset_daily_return(price_hist_24h: number[]) {
-  return (Math.abs(price_hist_24h[price_hist_24h.length - 1] - price_hist_24h[0]) / price_hist_24h[0]) * 100;
+  return +(((price_hist_24h[price_hist_24h.length - 1] - price_hist_24h[0]) / price_hist_24h[0]) * 100).toFixed(2);
 }

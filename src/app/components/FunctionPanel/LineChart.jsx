@@ -93,5 +93,5 @@ export default function LineChart(props) {
     };
   }, [props.chart_refresh]);
 
-  return <canvas ref={chartRef} style={{ position: 'absolute', width: '100%', height: '95%' }}></canvas>;
+  return <canvas ref={chartRef} style={{ position: 'flex', width: '80%', height: '320px' }}></canvas>;
 }

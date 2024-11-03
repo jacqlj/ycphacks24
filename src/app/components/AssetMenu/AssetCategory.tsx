@@ -1,6 +1,6 @@
 'use client';
 
-import { AwaitedReactNode, JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 import Asset from './Asset';
 import { GameAsset } from '@/app/util/structs';
@@ -12,7 +12,14 @@ export default function AssetCategory(props: {
   label: string;
   buy: boolean;
   multiplier: number;
-  monies: any;
+  monies: {
+    playerCapital: number;
+    setPlayerCapital: Dispatch<SetStateAction<number>>;
+    playerPortfolio: number;
+    setPlayerPortfolio: Dispatch<SetStateAction<number>>;
+    playerAssets: GameAsset[];
+    setPlayerAssets: Dispatch<SetStateAction<GameAsset[]>>;
+  };
 }) {
   const [active, setActive] = useState(false);
 
@@ -22,7 +29,13 @@ export default function AssetCategory(props: {
         <i className={`bi bi-${active ? 'dash' : 'plus'}-lg`}></i>
         <span>{props.label}</span>
       </div>
-      {active ? props.filtered_assets.map((a) => <Asset asset={a} sell={!props.buy} multiplier={props.multiplier} monies={props.monies}/>) : <></>}
+      {active ? (
+        props.filtered_assets.map((a) => (
+          <Asset key={a.symbol} asset={a} sell={!props.buy} multiplier={props.multiplier} monies={props.monies} />
+        ))
+      ) : (
+        <></>
+      )}
     </>
   );
 }

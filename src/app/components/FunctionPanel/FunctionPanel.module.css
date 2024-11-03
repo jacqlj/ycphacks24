@@ -1,0 +1,17 @@
+.container {
+
+  display: flex;
+
+}
+
+.chart {
+  width: 70%;
+  height: 320px;
+  position: sticky;
+  top: 0;
+}
+
+.toggle {
+  width: 30%;
+  overflow-y: scroll;
+}

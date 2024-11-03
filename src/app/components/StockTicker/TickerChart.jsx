@@ -12,14 +12,20 @@ export default function TickerChart(props) {
   useEffect(() => {
     const ctx = chartRef.current.getContext('2d');
 
-    console.log(props.assets);
-
     // Create the chart instance
     chartInstanceRef.current = new Chart(ctx, {
       type: 'line',
       data: {
         labels: [...Array(24).keys()],
-        datasets: props.asset,
+        datasets: [
+          {
+            label: props.assets.label,
+            data: props.assets.data,
+            borderColor: props.assets.borderColor,
+            pointRadius: 0,
+            fill: false,
+          },
+        ],
       },
       options: {
         scales: {
