@@ -688,6 +688,61 @@
       "severity": 0.39,
       "ticker_text": "Cargo ship crashes in Cyrea bridge",
       "broadcaster_text": "A cargo ship containing livestock has crashed into a bridge in Cyrea today, causing significant structural damage and halting traffic in the area. Tragically, there are no survivors among the crew or the animals onboard. Emergency responders are on the scene, working to contain the situation."
+    },
+    {
+      "id": 24,
+      "effects": [
+        {
+          "bias": -0.004,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": ["lux", "staples"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.22,
+      "ticker_text": "Lush recalled after Tomatogate",
+      "broadcaster_text": "After two months on the market, the skincare product known as Lush is being recalled after reports of severe rashes that left users with bright red, tomato-like skin. Customers are urged to stop using Lush immediately and consult their doctors if they experience any symptoms."
+    },
+    {
+      "id": 25,
+      "effects": [
+        {
+          "bias": -0.006667,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": ["pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": ["money"]
+            }
+          ]
+        },
+        {
+          "bias": 0.0095,
+          "conditions": [
+            {
+              "locations": ["kolechia"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["tech", "food", "staples", "realestate", "comms"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.5,
+      "ticker_text": "Kolechia announces new affordable health care law",
+      "broadcaster_text": "The Government of Kolechia has announced the launch of a comprehensive health care reform law aimed at expanding access to affordable medical services nationwide. The new legislation promises to improve patient care, reduce prescription costs, and expand insurance access across the country."
     }
   ],
   "assets": [
@@ -1092,7 +1147,7 @@
       "flavor_txt": "BizzCoin is tailored for small and medium-sized enterprises, streamlining payments and enhancing business operations in the digital realm."
     },
     {
-      "category": "commodities",
+      "category": "commodity",
       "symbol": "FOOD",
       "name": "Food Index",
       "b_price": 3.12,
@@ -1102,7 +1157,7 @@
       "flavor_txt": "The Food Index is a ticker that tracks the overall health of the agricultural industry worldwide."
     },
     {
-      "category": "commodities",
+      "category": "commodity",
       "symbol": "REM",
       "name": "Rare Earth Metal Index",
       "b_price": 32,
@@ -1112,7 +1167,7 @@
       "flavor_txt": "The Rare Earth Metal index is a ticker that forecasts the current/future status of the rare earth metal industry globally."
     },
     {
-      "category": "commodities",
+      "category": "commodity",
       "symbol": "GENI",
       "name": "Global Energy Index",
       "b_price": 83,

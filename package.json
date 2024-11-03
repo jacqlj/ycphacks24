@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^4.4.6",
     "distributions-normal-random": "^0.0.1",
     "mathjs": "^13.2.0",
     "next": "15.0.2",

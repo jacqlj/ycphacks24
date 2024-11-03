@@ -1,6 +1,10 @@
 :root {
   --background: #222;
   --foreground: #ededed;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 

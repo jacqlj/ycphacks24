@@ -1,0 +1,46 @@
+.mode {
+  display: grid;
+  grid: repeat(2, auto) / 7fr 6fr 7fr 8fr 9fr;
+  column-gap: 0.5rem;
+
+  padding: 1rem 1.5rem;
+  background-color: color-mix(in oklch, var(--background), #fff 20%);
+  margin-bottom: 1rem;
+}
+
+.mode span {
+  text-align: center;
+}
+
+.label {
+  font-weight: bolder;
+}
+
+.button:hover,
+.button:focus {
+  text-shadow: 0 0 1rem var(--foreground);
+}
+
+.button.active {
+  background-color: var(--foreground);
+  color: var(--background);
+  font-weight: bolder;
+}
+
+.category {
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-weight: bolder;
+  border: solid 4px var(--foreground);
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.category.open {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
+.category i {
+  margin-right: 0.5rem;
+}

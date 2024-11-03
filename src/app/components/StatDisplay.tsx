@@ -1,18 +1,18 @@
 import style from './StatDisplay.module.css';
 
-function StatDisplay({}) {
+function StatDisplay(props: { capital: string; datetime: string; portfolio: string }) {
   return (
     <>
       <div className={style.container}>
-        <div className={style.top}>JAN 01.2024 10:24AM</div>
+        <div className={style.top}>{props.datetime}</div>
         <div className={style.bottomcontainer}>
           <div className={style.bottom}>
             <div className={style.capitaltext}>CAPITAL</div>
-            <div className={style.moneytext}>$4.5 mil</div>
+            <div className={style.moneytext}>${props.capital}</div>
           </div>
           <div className={style.bottom}>
             <div className={style.capitaltext}>PORTFOLIO</div>
-            <div className={style.moneytext}>$3.75 mil</div>
+            <div className={style.moneytext}>${props.portfolio}</div>
           </div>
         </div>
       </div>

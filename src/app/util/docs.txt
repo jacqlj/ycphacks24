@@ -35,6 +35,7 @@ Event JSON Format:
   "broadcaster_text": ""
 }
 
+
 Severity Range: 0 -> 1
 Bias Range: -0.02 -> 0.02
 

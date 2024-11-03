@@ -96,3 +96,18 @@ function apply_if_match(asset: GameAsset, ev: GameEvent): void {
     }
   }
 }
+
+export function get_date_from_time(time: number) {
+  const date = new Date(Date.UTC(2020, 0, 1) + time * 60 * 60000);
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: '2-digit',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false,
+    timeZone: 'UTC',
+  }).format(date);
+}
+
+export function format_currency(value: number) {}
