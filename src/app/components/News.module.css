@@ -114,3 +114,9 @@
   height: 247px;
   color: var(--background);
 }
+
+.bubbleText div {
+  font-size: 1.5rem;
+  width: 290px;
+  padding: 2rem 2rem 3rem 2rem;
+}

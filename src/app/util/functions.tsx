@@ -15,17 +15,12 @@ export function step_time(
     return playerAssets;
   });
 
-  // update game statistics exposed to player
-
   // summon new event
-  //const severity_range = get_probabilistic_event_severity_range(time);
-  //const ev = spawn_event(events, severity_range, time);
-
-  //console.log(ev);
-  // state.assets.forEach((asset) => apply_if_match(asset, ev));
+  const severity_range = get_probabilistic_event_severity_range(time);
+  const ev = spawn_event(events, severity_range, time);
 
   // return summoned event for display
-  return null;
+  return ev;
 }
 
 /**
@@ -36,8 +31,11 @@ function update_asset(asset: GameAsset): void {
   const mu =
     1 +
     asset.effects.reduce((sum, effect) => {
+      effect.time_elapsed += 1;
       const tapered = get_tapered_bias(effect);
-      if (Math.abs(tapered) < 0.001) asset.effects = asset.effects.filter((e) => e != effect);
+      if (Math.abs(tapered) < 0.001 && effect.time_elapsed > 5)
+        asset.effects = asset.effects.filter((e) => e != effect);
+      console.log(asset.symbol, effect.time_elapsed, tapered * 100);
       return sum + tapered;
     }, 0);
   const sigma = asset.sigma;
@@ -73,7 +71,6 @@ function gaussianRandom(mu = 0, sigma = 1): number {
  * @returns The tapered bias of an effect given how long the effect has persisted since the event.
  */
 function get_tapered_bias(effect: GameAssetEffect): number {
-  effect.time_elapsed += 1;
   const alpha = 8 / (5 * effect.severity + 2);
   const beta = (4 - 3 * effect.severity) / 12;
   const num = effect.bias_max * gamma_dist(effect.time_elapsed, alpha, beta);
@@ -85,7 +82,6 @@ function gamma_dist(x: number, alpha: number, beta: number): number {
   return prod / gamma(alpha);
 }
 
-// TODO
 function get_probabilistic_event_severity_range(time_elapsed: number): [number, number] {
   let sev_mod = (time_elapsed % 240) / 290;
 
@@ -98,7 +94,7 @@ function get_probabilistic_event_severity_range(time_elapsed: number): [number, 
 function spawn_event(events: GameEvent[], severity_range: [number, number], time: number): GameEvent | null {
   const rand_idx = () => Math.floor(Math.random() * events.length);
   let ev: GameEvent;
-  if (time % 168 == 0) {
+  if (time % 80 == 0) {
     do {
       ev = events[rand_idx()];
       console.log();
@@ -108,7 +104,9 @@ function spawn_event(events: GameEvent[], severity_range: [number, number], time
   return null;
 }
 
-function apply_if_match(asset: GameAsset, ev: GameEvent): void {
+export function apply_if_match(asset: GameAsset, ev: GameEvent): GameAsset {
+  console.log('applying', asset.symbol, ev.id);
+
   const match_condition = (as: GameAsset, cd: GameEffectCondition): boolean => {
     if (cd.locations.length && !cd.locations.includes(as.location)) return false;
     if (cd.attributes.length && !cd.attributes.some((a) => as.attributes.includes(a))) return false;
@@ -117,6 +115,7 @@ function apply_if_match(asset: GameAsset, ev: GameEvent): void {
 
   for (const eff of ev.effects) {
     if (eff.conditions.some((cond) => match_condition(asset, cond))) {
+      console.log(asset.symbol, eff.bias);
       asset.effects.push({
         bias_max: eff.bias,
         time_elapsed: 0,
@@ -124,6 +123,8 @@ function apply_if_match(asset: GameAsset, ev: GameEvent): void {
       });
     }
   }
+
+  return asset;
 }
 
 export function get_date_from_time(time: number) {
@@ -148,4 +149,15 @@ export function format_number(n: number) {
 
 export function asset_daily_return(price_hist_24h: number[]) {
   return +(((price_hist_24h[price_hist_24h.length - 1] - price_hist_24h[0]) / price_hist_24h[0]) * 100).toFixed(2);
+}
+
+export function split_sentence(sentence: string, chunkSize: number) {
+  const words = sentence.split(' ');
+  const chunks = [];
+
+  for (let i = 0; i < words.length; i += chunkSize) {
+    chunks.push(words.slice(i, i + chunkSize).join(' '));
+  }
+
+  return chunks;
 }

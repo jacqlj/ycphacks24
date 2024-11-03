@@ -1,7 +1,14 @@
 'use client';
 
 import { GameAsset, GameAssetTemplate, GameEvent } from './util/structs';
-import { format_number, get_date_from_time, init_price_history_24h, step_time } from './util/functions';
+import {
+  apply_if_match,
+  format_number,
+  get_date_from_time,
+  init_price_history_24h,
+  split_sentence,
+  step_time,
+} from './util/functions';
 import { useEffect, useMemo, useState } from 'react';
 
 import AssetMenu from './components/AssetMenu/AssetMenu';
@@ -22,7 +29,7 @@ export default function Home() {
   const [time, setTime] = useState(typeof window !== 'undefined' ? +(localStorage.getItem('time') ?? 0) : 0);
 
   const [eventHistory, setEventHistory] = useState<GameEvent[]>([]);
-  // const [eventQueue, setEventQueue] = useState<GameEvent[]>([]);
+  const [currentEventSentences, setCurrentEventSentences] = useState<string[]>([]);
 
   const [playerAssets, setPlayerAssets] = useState<GameAsset[]>([]);
   const [playerCapital, setPlayerCapital] = useState<number>(1000);
@@ -59,6 +66,7 @@ export default function Home() {
           price_hist_24h: init_price_history_24h(a),
           price_hist_30d: [],
           average_cost: 0,
+          total_bought: 0,
           effects: [],
           sigma: a.sigma,
           category: a.category,
@@ -75,11 +83,28 @@ export default function Home() {
       setTime((time) => time + 1);
 
       // everything goes here
-      const ev = step_time(eventPool, 106, setPlayerAssets);
+      const ev = step_time(eventPool, time, setPlayerAssets);
+      if (ev !== null) {
+        setCurrentEventSentences(split_sentence(ev.broadcaster_text, 10));
+        setPlayerAssets((assets) =>
+          assets.map((asset) => {
+            console.log('calling', asset.symbol, ev.id);
+            return apply_if_match(asset, ev);
+          })
+        );
+      }
 
       localStorage.setItem('time', `${time}`);
     }, 1000);
   }, [time]);
+
+  useEffect(() => {
+    if (currentEventSentences.length > 0) {
+      setTimeout(() => {
+        setCurrentEventSentences((cur) => cur.slice(1));
+      }, 3000);
+    }
+  }, [currentEventSentences]);
 
   // memoization declarations
   const datetime = useMemo(() => get_date_from_time(time), [time]);
@@ -87,6 +112,10 @@ export default function Home() {
   const player_portfolio = useMemo(
     () => playerAssets.reduce((sum, a) => +(sum + a.price * a.quantity).toFixed(2), 0),
     [time]
+  );
+  const speech_text = useMemo(
+    () => (currentEventSentences.length > 0 ? currentEventSentences[0] : undefined),
+    [currentEventSentences]
   );
 
   // prevent hydration error
@@ -102,7 +131,7 @@ export default function Home() {
         <FunctionPanel chart_refresh={chart_refresh} assets={playerAssets} />
       </div>
       <div className={styles.news}>
-        <News eventPool={eventPool} />
+        <News eventPool={eventPool} speechText={speech_text} />
       </div>
       <div className={styles.stats}>
         <StatDisplay

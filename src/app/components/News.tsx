@@ -1,7 +1,7 @@
 import { GameEvent } from '../util/structs';
 import style from './News.module.css';
 
-export default function News(props: { eventPool: GameEvent[] }) {
+export default function News(props: { eventPool: GameEvent[]; speechText?: string }) {
   const speech_bubble = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,6 @@ export default function News(props: { eventPool: GameEvent[] }) {
       viewBox="0 0 444.19 247"
       xmlSpace="preserve"
       className={style.bubble}
-      // {...props}
     >
       <defs />
       <path
@@ -25,10 +24,10 @@ export default function News(props: { eventPool: GameEvent[] }) {
 
   return (
     <div className={style.container}>
-      <div className={style.bubbleContainer}>
+      <div className={style.bubbleContainer} style={{ visibility: props.speechText ? 'visible' : 'hidden' }}>
         {speech_bubble}
         <div className={style.bubbleText}>
-          <div>This is text to be displayed in the bubble.</div>
+          <div>{props.speechText ?? ''}</div>
         </div>
       </div>
       <div className={style.bottomContainer}>

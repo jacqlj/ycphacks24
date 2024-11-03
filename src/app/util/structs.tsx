@@ -22,6 +22,7 @@ export interface GameAsset {
   price_hist_24h: number[];
   price_hist_30d: number[];
   average_cost: number;
+  total_bought: number;
   effects: GameAssetEffect[];
   sigma: number;
   category: string;

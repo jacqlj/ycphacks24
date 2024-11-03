@@ -33,7 +33,14 @@ export default function Asset(props: {
     if (!props.sell) {
       props.monies.setPlayerAssets((assets: GameAsset[]) =>
         assets.map((a: GameAsset) =>
-          a.symbol === props.asset.symbol ? { ...a, quantity: a.quantity + props.multiplier } : a
+          a.symbol === props.asset.symbol
+            ? {
+                ...a,
+                quantity: a.quantity + props.multiplier,
+                total_bought: a.total_bought + props.multiplier,
+                average_cost: (a.average_cost * a.total_bought + mult_price) / (a.total_bought + props.multiplier),
+              }
+            : a
         )
       );
       props.monies.setPlayerCapital((capital: number) => +(capital - mult_price).toFixed(2));
@@ -71,7 +78,7 @@ export default function Asset(props: {
             <></>
           ) : (
             <div className={style.trend}>
-              {return_icon}&nbsp;{Math.abs(daily_return)}
+              {return_icon}&nbsp;{Math.abs(daily_return)}%
             </div>
           )}
           {props.sell ? <div className={style.return}>{total_return}</div> : <></>}
