@@ -1,17 +1,110 @@
+.iconContainer {
+  position: sticky;
+  /* Position to the left of the menu */
+  top: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  background-color: var(--background);
+  /* Adjust size as needed */
+  padding: 5px;
+  /* Padding for the icon */
+  border-radius: 5px;
+  /* Rounded edges for the icon */
+  transition: left 0.3s ease;
+  /* Smooth transition for icon position */
+  z-index: 10;
+}
+
 .container {
-
   display: flex;
-
+  transition: all 0.3s ease;
+  position: relative;
+  column-gap: 1rem;
 }
 
 .chart {
-  width: 70%;
-  height: 320px;
+  height: 340px;
   position: sticky;
   top: 0;
+  transition: width 0.3s ease;
+  width: 55%;
+  /* Width when menu is open */
+  z-index: 1;
 }
 
 .toggle {
-  width: 30%;
+  width: 45%;
+  /* Default width for the menu */
   overflow-y: scroll;
+  transition: width 0.3s ease;
+  position: relative;
+  /* Allows positioning of the icon */
+  z-index: 2;
+}
+
+.menuOpen {
+  width: 45%;
+  /* Width when menu is open */
+}
+
+.menuClosed {
+  width: 50px;
+  /* Fixed width when collapsed */
+  overflow: hidden;
+  /* Hide overflow */
+}
+
+.chartExpanded {
+  width: 55%;
+  /* Width when menu is open */
+}
+
+.chartCollapsed {
+  width: calc(100% - 50px);
+  /* Adjusted to account for the icon */
+}
+
+.categoryHeader {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+}
+
+.categoryContent {
+  padding-left: 20px;
+  border-left: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.assetRow {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+}
+
+.assetSymbol {
+  background-color: white;
+  color: black;
+  padding: 4px 8px;
+  margin-left: 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 50px;
+}
+
+.assetName {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 12px;
 }

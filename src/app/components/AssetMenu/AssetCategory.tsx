@@ -15,13 +15,11 @@ export default function AssetCategory(props: {
   monies: {
     playerCapital: number;
     setPlayerCapital: Dispatch<SetStateAction<number>>;
-    playerPortfolio: number;
-    setPlayerPortfolio: Dispatch<SetStateAction<number>>;
     playerAssets: GameAsset[];
     setPlayerAssets: Dispatch<SetStateAction<GameAsset[]>>;
   };
 }) {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(props.category === 'commodity');
 
   return (
     <>

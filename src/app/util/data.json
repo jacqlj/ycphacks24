@@ -245,7 +245,7 @@
         }
       ],
       "severity": 0.4,
-      "ticker_text": "Artstotska unveils the world's first flying car!",
+      "ticker_text": "Artstotska unveils world's first flying car",
       "broadcaster_text": "Exciting news from Arstotska as an engineer has unveiled the world’s first flying car, a groundbreaking innovation that promises to revolutionize personal transportation. The invention has garnered international attention, sparking discussions about future urban planning and regulatory frameworks. Experts predict this could mark a new era in mobility and technology."
     },
 
@@ -267,7 +267,7 @@
         }
       ],
       "severity": 0.6,
-      "ticker_text": "Sordland discovers purplecream uranium!",
+      "ticker_text": "Sordland discovers purplecream uranium",
       "broadcaster_text": "In a significant scientific breakthrough, Cyrean Intelligence has discovered a new variant of uranium known as Purplecream uranium in Sordland. This discovery could have profound implications for energy production and geopolitical dynamics, raising concerns and interest among global powers. Authorities are closely monitoring developments regarding this rare resource."
     },
 
@@ -302,7 +302,7 @@
         }
       ],
       "severity": 0.3,
-      "ticker_text": "A scientist in Sealand invents a new weightloss medication called Richie!",
+      "ticker_text": "Sealand scientist invents new weightloss medication",
       "broadcaster_text": "A Sealand scientist has developed an innovative weight loss medication named 'Richie,' now available in liquid form. This breakthrough is expected to transform weight management options and could lead to a surge in demand for the product. Health experts are eager to see its impact on the wellness industry."
     },
 
@@ -324,7 +324,7 @@
         }
       ],
       "severity": 0.5,
-      "ticker_text": "A tech company in Kolechia suffers cybersecurity attack!",
+      "ticker_text": "Kolechia tech company suffers cybersecurity attack",
       "broadcaster_text": "Kolechia faces a major setback as its tech company 'Slate' suffers a significant cybersecurity attack, potentially compromising sensitive data and disrupting operations. The attack raises alarms about the vulnerability of digital infrastructures in the tech sector."
     },
 
@@ -359,7 +359,7 @@
         }
       ],
       "severity": 0.7,
-      "ticker_text": "Jorga Union's currency has declined in value!",
+      "ticker_text": "Jorga Union's currency declines in value",
       "broadcaster_text": "The Jorga Union is grappling with a troubling economic trend as its currency value has decreased significantly. Analysts attribute this decline to ongoing market instability and trade tensions. Economists are warning of potential ramifications for trade and investment in the region."
     },
 
@@ -381,7 +381,7 @@
         }
       ],
       "severity": 0.5,
-      "ticker_text": "The Federal Risserve Bank in Rizzland raises interest rates!",
+      "ticker_text": "Rizzland Federal Risserve Bank raises interest rates",
       "broadcaster_text": "The Federal Rizzerve Bank in Rizzland has announced a raise in interest rates, a move aimed at curbing inflation and stabilizing the economy. This decision is expected to affect borrowing costs and consumer spending. Financial markets are reacting cautiously as investors assess the long-term implications."
     },
 
@@ -424,7 +424,7 @@
         }
       ],
       "severity": 0.5,
-      "ticker_text": "There is a trade dispute between Sealand and Jorga Union!",
+      "ticker_text": "Trade dispute between Sealand, Jorga Union",
       "broadcaster_text": "Tensions rise as Sealand and the Jorga Union enter a trade dispute over steel importation, potentially disrupting bilateral trade relations. Both nations are at odds over tariffs and regulations, with implications for industries reliant on steel. Diplomatic efforts are underway to resolve the conflict."
     },
     {
@@ -521,7 +521,7 @@
         }
       ],
       "severity": 0.6,
-      "ticker_text": "Unemployment rates reach record high in Sealand",
+      "ticker_text": "Sealand unemployment rate reaches record high",
       "broadcaster_text": "The unemployment rate in Sealand has reportedly reached a record high of 12.6%. This alarming figure reflects significant economic challenges facing Sealand as businesses struggle to recover from the impact of recent crises. Economists are expressing deep concern as jobs losses continue to mountain across various sectors, with the hardest hit industries being hospitality, retail, and manufacturing."
     },
     {
@@ -610,7 +610,7 @@
         }
       ],
       "severity": 0.3,
-      "ticker_text": "Animals in South Rizzlandian farm die from oil-contaminated water",
+      "ticker_text": "South Rizzlandian farm animals die from oil-contaminated water",
       "broadcaster_text": "Tragedy strikes as dozens of farm animals have died after drinking oil-contaminated water in a rural area in South Rizzland, raising concerns about the safety of local resources. Officials are investigating the source of the contamination as residents fear further impact on livestock and crops."
     },
     {
@@ -775,7 +775,7 @@
         }
       ],
       "severity": 0.62,
-      "ticker_text": "Air Force pilot dies in aviation accident near oil plant.",
+      "ticker_text": "Air Force pilot dies in aviation accident near oil plant",
       "broadcaster_text": "Tragedy struck today as Major Tom, a decorated pilot in the Jorgo Union Air Force, died after crashing an O-27 crashed during a routine training flight nearby an oil field in West Jorgo Union. The incident is under investigation, and officials are assessing the impact on operations in the area."
     },
     {

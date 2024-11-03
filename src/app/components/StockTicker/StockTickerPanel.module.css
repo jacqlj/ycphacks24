@@ -3,13 +3,13 @@
   display: flex;
   overflow-x: hidden;
   margin: 1rem;
-  column-gap: 5rem;
+  column-gap: 14rem;
 
 }
 
 .marquee {
   display: flex;
-  column-gap: 5rem;
+  column-gap: 6.5rem;
   /* Use flex to lay out items in a row */
   white-space: nowrap;
   /* Prevent text wrapping */

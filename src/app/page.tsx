@@ -22,11 +22,10 @@ export default function Home() {
   const [time, setTime] = useState(typeof window !== 'undefined' ? +(localStorage.getItem('time') ?? 0) : 0);
 
   const [eventHistory, setEventHistory] = useState<GameEvent[]>([]);
-  const [eventQueue, setEventQueue] = useState<GameEvent[]>([]);
+  // const [eventQueue, setEventQueue] = useState<GameEvent[]>([]);
 
   const [playerAssets, setPlayerAssets] = useState<GameAsset[]>([]);
   const [playerCapital, setPlayerCapital] = useState<number>(1000);
-  const [playerPortfolio, setPlayerPortfolio] = useState<number>(0);
 
   // prevent hydration errors
   const [isMounted, setIsMounted] = useState(false);
@@ -76,7 +75,7 @@ export default function Home() {
       setTime((time) => time + 1);
 
       // everything goes here
-      // const ev = step_time(eventPool, 106);
+      const ev = step_time(eventPool, 106, setPlayerAssets);
 
       localStorage.setItem('time', `${time}`);
     }, 1000);
@@ -84,7 +83,11 @@ export default function Home() {
 
   // memoization declarations
   const datetime = useMemo(() => get_date_from_time(time), [time]);
-  const chart_refresh = useMemo(() => Math.floor(time / 5), [time]);
+  const chart_refresh = useMemo(() => Math.floor(time / 1), [time]);
+  const player_portfolio = useMemo(
+    () => playerAssets.reduce((sum, a) => +(sum + a.price * a.quantity).toFixed(2), 0),
+    [time]
+  );
 
   // prevent hydration error
   // must occur after all hooks
@@ -99,12 +102,12 @@ export default function Home() {
         <FunctionPanel chart_refresh={chart_refresh} assets={playerAssets} />
       </div>
       <div className={styles.news}>
-        <News />
+        <News eventPool={eventPool} />
       </div>
       <div className={styles.stats}>
         <StatDisplay
           capital={`${format_number(playerCapital)}`}
-          portfolio={`${format_number(playerPortfolio)}`}
+          portfolio={`${format_number(player_portfolio)}`}
           datetime={datetime}
         />
       </div>
@@ -114,8 +117,6 @@ export default function Home() {
           monies={{
             playerCapital,
             setPlayerCapital,
-            playerPortfolio,
-            setPlayerPortfolio,
             playerAssets,
             setPlayerAssets,
           }}

@@ -1,24 +1,31 @@
+import { Dispatch, SetStateAction } from 'react';
 import { GameAsset, GameAssetEffect, GameAssetTemplate, GameEffectCondition, GameEvent, GameState } from './structs';
 
 import { gamma } from 'mathjs';
 
-export function step_time(events: GameEvent[], time: number): GameEvent {
-  const norm_dist = require('distributions-normal-random');
-  norm_dist.seed = Date.now();
-
+export function step_time(
+  events: GameEvent[],
+  time: number,
+  setPlayerAssets: Dispatch<SetStateAction<GameAsset[]>>
+): GameEvent | null {
   // update asset prices
-  //state.assets.forEach((asset) => update_asset(asset));
+
+  setPlayerAssets((playerAssets: GameAsset[]) => {
+    playerAssets.forEach((asset) => update_asset(asset));
+    return playerAssets;
+  });
 
   // update game statistics exposed to player
 
   // summon new event
-  const severity_range = get_probabilistic_event_severity_range(time);
-  const ev = spawn_event(events, severity_range);
+  //const severity_range = get_probabilistic_event_severity_range(time);
+  //const ev = spawn_event(events, severity_range, time);
+
   //console.log(ev);
   // state.assets.forEach((asset) => apply_if_match(asset, ev));
 
   // return summoned event for display
-  return ev;
+  return null;
 }
 
 /**
@@ -35,7 +42,7 @@ function update_asset(asset: GameAsset): void {
     }, 0);
   const sigma = asset.sigma;
   const new_price = asset.price * gaussianRandom(mu, sigma);
-  asset.price = new_price;
+  asset.price = new_price + 0.02; // offset to prevent collapse to 0
   asset.price_hist_24h.shift();
   asset.price_hist_24h.push(new_price);
 }
@@ -46,7 +53,7 @@ export function init_price_history_24h(asset: GameAssetTemplate): number[] {
   let price = asset.b_price;
   for (let index = 0; index < 23; index++) {
     price *= gaussianRandom(1, sigma);
-    price_history.push(price);
+    price_history.push(price + 0.02); // offset to prevent collapse to 0
   }
   price_history.push(asset.b_price);
   return price_history;

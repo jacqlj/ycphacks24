@@ -1,9 +1,20 @@
+import { Dispatch, SetStateAction } from 'react';
 import { asset_daily_return, format_number } from '@/app/util/functions';
 
 import { GameAsset } from '@/app/util/structs';
 import style from './Asset.module.css';
 
-export default function Asset(props: { asset: GameAsset; sell: boolean; multiplier: number; monies: any }) {
+export default function Asset(props: {
+  asset: GameAsset;
+  sell: boolean;
+  multiplier: number;
+  monies: {
+    playerCapital: number;
+    setPlayerCapital: Dispatch<SetStateAction<number>>;
+    playerAssets: GameAsset[];
+    setPlayerAssets: Dispatch<SetStateAction<GameAsset[]>>;
+  };
+}) {
   const daily_return = asset_daily_return(props.asset.price_hist_24h);
   const return_icon =
     daily_return >= 0 ? (

@@ -6,25 +6,6 @@ import React, { useEffect, useRef, useState } from 'react';
 Chart.register(...registerables);
 
 export default function LineChart(props) {
-  //State to determine which stocks be displayed
-  const [selectedStocks, setSelectedStocks] = useState(['RTK', 'FDP', 'PHR']);
-
-  const setVisible = (symbol) => {
-    selected = selectedStocks;
-    if (selected.length === 3) selected.shift();
-    selected.push(symbol);
-    setSelectedStocks(selected);
-  };
-
-  const setInvisible = (symbol) => {
-    if (!selectedStocks.includes(symbol)) return;
-    setSelectedStocks(selectedStocks.filter((s) => s !== symbol));
-  };
-
-  // array of price histories => assets.filter((a: GameAsset) => selectedStocks.includes(a.symbol))
-  //                                   .map((a: GameAsset) => a.price_history : number[]);
-  //                             [[p11, p12, ...], [p21, p22, ...], [p31, p32, ...]]
-
   const chartRef = useRef(null);
   const chartInstanceRef = useRef(null);
 
@@ -37,7 +18,7 @@ export default function LineChart(props) {
     const ctx = chartRef.current.getContext('2d');
 
     const datasets = props.assets
-      .filter((asset) => selectedStocks.includes(asset.symbol))
+      .filter((asset) => props.selectedAssets.includes(asset.symbol))
       .map((asset) => ({
         label: asset.symbol,
         data: asset.price_hist_24h,
@@ -91,7 +72,7 @@ export default function LineChart(props) {
     return () => {
       chartInstanceRef.current.destroy();
     };
-  }, [props.chart_refresh]);
+  }, [props.chart_refresh, props.selectedAssets]);
 
   return <canvas ref={chartRef} style={{ position: 'flex', width: '80%', height: '320px' }}></canvas>;
 }

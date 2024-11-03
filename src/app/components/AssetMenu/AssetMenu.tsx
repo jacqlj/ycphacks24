@@ -11,8 +11,6 @@ export default function AssetMenu(props: {
   monies: {
     playerCapital: number;
     setPlayerCapital: Dispatch<SetStateAction<number>>;
-    playerPortfolio: number;
-    setPlayerPortfolio: Dispatch<SetStateAction<number>>;
     playerAssets: GameAsset[];
     setPlayerAssets: Dispatch<SetStateAction<GameAsset[]>>;
   };

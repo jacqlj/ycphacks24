@@ -30,7 +30,7 @@ export default function StockTickerPanel(props: { chart_refresh: number; assets:
       <div className={`${styles.container}`}>
         <div className={styles.marquee}>
           {datasets.map((assetsubset: any) => (
-            <StockTicker chart_refresh={props.chart_refresh} asset={assetsubset} />
+            <StockTicker key={assetsubset.label} chart_refresh={props.chart_refresh} asset={assetsubset} />
           ))}
         </div>
       </div>
