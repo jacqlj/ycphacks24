@@ -2,7 +2,16 @@ import TickerChart from './TickerChart';
 import { asset_daily_return } from '@/app/util/functions';
 import styles from './StockTicker.module.css';
 
-function StockTicker(props: { chart_refresh: number; asset: any }) {
+function StockTicker(props: {
+  chart_refresh: number;
+  asset: {
+    label: string;
+    data: number[];
+    borderColor: string;
+    pointRadius: number;
+    fill: boolean;
+  };
+}) {
   const daily_return = asset_daily_return(props.asset.data);
   const return_icon =
     daily_return >= 0 ? (

@@ -22,8 +22,11 @@ export default function Asset(props: {
     ) : (
       <i className="bi bi-caret-down-fill" style={{ color: '#f00' }}></i>
     );
-  const total_return = 0;
   const mult_price = props.asset.price * props.multiplier;
+  const total_return =
+    !props.asset.quantity || !props.asset.total_bought
+      ? '—'
+      : `${+((props.asset.price / props.asset.average_cost) * 100).toFixed(2)}%`;
 
   const nothing_to_sell = props.sell && props.asset.quantity < props.multiplier;
   const cant_afford = !props.sell && mult_price > props.monies.playerCapital;

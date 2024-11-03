@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import { GameAsset, GameAssetEffect, GameAssetTemplate, GameEffectCondition, GameEvent, GameState } from './structs';
+import { GameAsset, GameAssetEffect, GameAssetTemplate, GameEffectCondition, GameEvent } from './structs';
 
 import { gamma } from 'mathjs';
 
@@ -83,10 +83,10 @@ function gamma_dist(x: number, alpha: number, beta: number): number {
 }
 
 function get_probabilistic_event_severity_range(time_elapsed: number): [number, number] {
-  let sev_mod = (time_elapsed % 240) / 290;
+  const sev_mod = (time_elapsed % 240) / 290;
 
-  let min = 0 + sev_mod;
-  let max = 0.16 + sev_mod;
+  const min = 0 + sev_mod;
+  const max = 0.16 + sev_mod;
 
   return [min, max];
 }

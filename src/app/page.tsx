@@ -15,7 +15,7 @@ import AssetMenu from './components/AssetMenu/AssetMenu';
 import FunctionPanel from './components/FunctionPanel/FunctionPanel';
 import News from './components/News';
 import StatDisplay from './components/StatDisplay';
-import StockTicker from './components/StockTicker/StockTicker';
+// import StockTicker from './components/StockTicker/StockTicker';
 import StockTickerPanel from './components/StockTicker/StockTickerPanel';
 import styles from './page.module.css';
 
@@ -28,7 +28,7 @@ export default function Home() {
   // game state
   const [time, setTime] = useState(typeof window !== 'undefined' ? +(localStorage.getItem('time') ?? 0) : 0);
 
-  const [eventHistory, setEventHistory] = useState<GameEvent[]>([]);
+  // const [eventHistory, setEventHistory] = useState<GameEvent[]>([]);
   const [currentEventSentences, setCurrentEventSentences] = useState<string[]>([]);
 
   const [playerAssets, setPlayerAssets] = useState<GameAsset[]>([]);

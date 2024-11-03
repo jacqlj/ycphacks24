@@ -1,7 +1,7 @@
 'use client';
 
 import { Chart, registerables } from 'chart.js';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 Chart.register(...registerables);
 
@@ -51,7 +51,7 @@ export default function LineChart(props) {
             },
             ticks: {
               // Use the callback function to filter labels
-              callback: function (value, index, values) {
+              callback: function (value, index) {
                 // Show label only for every second point
                 return index % 2 === 0 ? value : '';
               },
