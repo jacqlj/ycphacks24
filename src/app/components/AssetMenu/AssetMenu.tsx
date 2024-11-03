@@ -5,41 +5,61 @@ import { GameAsset } from '../../util/structs';
 import style from './AssetMenu.module.css';
 import { useState } from 'react';
 
-export default function AssetMenu(props: { assets: GameAsset[] }) {
+export default function AssetMenu(props: { assets: GameAsset[]; monies: any }) {
   const [buyMode, setBuyMode] = useState(true);
   const [multiplier, setMultiplier] = useState(1);
 
   return (
-    <>
-      <div className={style.mode}>
-        <span className={style.label}>Buy</span>
-        <span className={`${style.button} ${buyMode && multiplier === 1 ? style.active : ''}`}>&times;1</span>
-        <span className={`${style.button} ${buyMode && multiplier === 10 ? style.active : ''}`}>&times;10</span>
-        <span className={`${style.button} ${buyMode && multiplier === 100 ? style.active : ''}`}>&times;100</span>
-        <span className={`${style.button} ${buyMode && multiplier === 1000 ? style.active : ''}`}>&times;1000</span>
-        <span className={style.label}>Sell</span>
-        <span className={`${style.button} ${!buyMode && multiplier === 1 ? style.active : ''}`}>&times;1</span>
-        <span className={`${style.button} ${!buyMode && multiplier === 10 ? style.active : ''}`}>&times;10</span>
-        <span className={`${style.button} ${!buyMode && multiplier === 100 ? style.active : ''}`}>&times;100</span>
-        <span className={`${style.button} ${!buyMode && multiplier === 1000 ? style.active : ''}`}>&times;1000</span>
+    <div className={style.container}>
+      <div className={style.modeContainer}>
+        <div className={style.mode}>
+          <span className={style.label}>Buy</span>
+          {[1, 10, 100, 1000].map((i) => (
+            <span
+              className={`${style.button} ${buyMode && multiplier === i ? style.active : ''}`}
+              onClick={() => (setMultiplier(i), setBuyMode(true))}
+            >
+              &times;{i}
+            </span>
+          ))}
+          <span className={style.label}>Sell</span>
+          {[1, 10, 100, 1000].map((i) => (
+            <span
+              className={`${style.button} ${!buyMode && multiplier === i ? style.active : ''}`}
+              onClick={() => (setMultiplier(i), setBuyMode(false))}
+            >
+              &times;{i}
+            </span>
+          ))}
+        </div>
+        <div className={style.border}></div>
       </div>
       <div className={style.menu}>
         <AssetCategory
-          assets={props.assets.filter((a) => a.category === 'commodity')}
+          filtered_assets={props.assets.filter((a) => a.category === 'commodity')}
           category={'commodity'}
           label={'COMMODITIES'}
+          buy={buyMode}
+          multiplier={multiplier}
+          monies={props.monies}
         />
         <AssetCategory
-          assets={props.assets.filter((a) => a.category === 'stock')}
+          filtered_assets={props.assets.filter((a) => a.category === 'stock')}
           category={'stock'}
           label={'STOCKS'}
+          buy={buyMode}
+          multiplier={multiplier}
+          monies={props.monies}
         />
         <AssetCategory
-          assets={props.assets.filter((a) => a.category === 'crypto')}
+          filtered_assets={props.assets.filter((a) => a.category === 'crypto')}
           category={'crypto'}
           label={'CRYPTO'}
+          buy={buyMode}
+          multiplier={multiplier}
+          monies={props.monies}
         />
       </div>
-    </>
+    </div>
   );
 }

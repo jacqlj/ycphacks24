@@ -1,13 +1,15 @@
 'use client';
 
 import { GameAsset, GameAssetTemplate, GameEvent, GameState } from './util/structs';
-import { get_date_from_time, update_asset } from './util/functions';
+import { format_number, get_date_from_time, init_price_history_24h } from './util/functions';
 import { useEffect, useMemo, useState } from 'react';
 
 import AssetMenu from './components/AssetMenu/AssetMenu';
 import FunctionPanel from './components/FunctionPanel/FunctionPanel';
+import News from './components/News';
 import StatDisplay from './components/StatDisplay';
-import StockTicker from './components/StockTicker';
+import StockTicker from './components/StockTicker/StockTicker';
+import StockTickerPanel from './components/StockTicker/StockTickerPanel';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -17,9 +19,11 @@ export default function Home() {
   const [eventPool, setEventPool] = useState<GameEvent[]>([]);
 
   // game state
-  const [time, setTime] = useState(+(localStorage.getItem('time') ?? 0));
+  const [time, setTime] = useState(typeof window !== 'undefined' ? +(localStorage.getItem('time') ?? 0) : 0);
   const [playerAssets, setPlayerAssets] = useState<GameAsset[]>([]);
   const [eventHistory, setEventHistory] = useState<GameEvent[]>([]);
+  const [playerCapital, setPlayerCapital] = useState<number>(1000);
+  const [playerPortfolio, setPlayerPortfolio] = useState<number>(0);
 
   // prevent hydration errors
   const [isMounted, setIsMounted] = useState(false);
@@ -50,7 +54,9 @@ export default function Home() {
           name: a.name,
           quantity: 0,
           price: a.b_price,
-          price_hist: [],
+          price_hist_24h: init_price_history_24h(a),
+          price_hist_30d: [],
+          average_cost: 0,
           effects: [],
           sigma: a.sigma,
           category: a.category,
@@ -82,18 +88,34 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.stock_ticker}>
-        <StockTicker />
+      <div className={styles.stock_ticker_panel}>
+        <StockTickerPanel chart_refresh={chart_refresh} assets={playerAssets} />
       </div>
       <div className={styles.function_panel}>
-        <FunctionPanel chart_refresh={chart_refresh} />
+        <FunctionPanel chart_refresh={chart_refresh} assets={playerAssets} />
       </div>
-      <div className={styles.news}></div>
+      <div className={styles.news}>
+        <News />
+      </div>
       <div className={styles.stats}>
-        <StatDisplay capital={'370000'} datetime={datetime} portfolio={'300000'} />
+        <StatDisplay
+          capital={`${format_number(playerCapital)}`}
+          portfolio={`${format_number(playerPortfolio)}`}
+          datetime={datetime}
+        />
       </div>
       <div className={styles.asset_menu}>
-        <AssetMenu assets={playerAssets} />
+        <AssetMenu
+          assets={playerAssets}
+          monies={{
+            playerCapital,
+            setPlayerCapital,
+            playerPortfolio,
+            setPlayerPortfolio,
+            playerAssets,
+            setPlayerAssets,
+          }}
+        />
       </div>
     </div>
   );

@@ -743,6 +743,116 @@
       "severity": 0.5,
       "ticker_text": "Kolechia announces new affordable health care law",
       "broadcaster_text": "The Government of Kolechia has announced the launch of a comprehensive health care reform law aimed at expanding access to affordable medical services nationwide. The new legislation promises to improve patient care, reduce prescription costs, and expand insurance access across the country."
+    },
+    {
+      "id": 26,
+      "effects": [
+        {
+          "bias": -0.011,
+          "conditions": [
+            {
+              "locations": ["jorgaunion"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [],
+              "attributes": ["metals", "energy", "realestate"]
+            }
+          ]
+        },
+        {
+          "bias": 0.005,
+          "conditions": [
+            {
+              "locations": ["jorgaunion"],
+              "attributes": ["pharma"]
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        }
+      ],
+      "severity": 0.62,
+      "ticker_text": "Air Force pilot dies in aviation accident near oil plant.",
+      "broadcaster_text": "Tragedy struck today as Major Tom, a decorated pilot in the Jorgo Union Air Force, died after crashing an O-27 crashed during a routine training flight nearby an oil field in West Jorgo Union. The incident is under investigation, and officials are assessing the impact on operations in the area."
+    },
+    {
+      "id": 27,
+      "effects": [
+        {
+          "bias": -0.008,
+          "conditions": [
+            {
+              "locations": ["rizzland"],
+              "attributes": ["tech"]
+            },
+            {
+              "locations": [""],
+              "attributes": ["realestate", "money", "lux"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.71,
+      "ticker_text": "Rust implicated in welfare funds scandal",
+      "broadcaster_text": "Leon Rust has been accused of using over $10 million of welfare funds to help build a new softball field for Rizzland State University, his daughter's alma mater. Rust, the founder and CEO of the social media app Theta, has become public enemy number one as critics are claimi"
+    },
+    {
+      "id": 28,
+      "effects": [
+        {
+          "bias": -0.0138,
+          "conditions": [
+            {
+              "locations": ["sordland"],
+              "attributes": ["food", "energy"]
+            },
+            {
+              "locations": [],
+              "attributes": []
+            }
+          ]
+        },
+        {
+          "bias": 0.0044,
+          "conditions": [
+            {
+              "locations": ["sordland"],
+              "attributes": []
+            },
+            {
+              "locations": [],
+              "attributes": ["pharma", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.72,
+      "ticker_text": "Big Eats hit with lawsuit over food safety concerns",
+      "broadcaster_text": "The multinational food company known as Big Eats is facing a lawsuit following the discovery of a dangerous pathogen in its frozen meals, raising concerns about food safety and consumer health. The lawsuit claims negligence in quality control, prompting a nationwide recall of affected products."
+    },
+    {
+      "id": 29,
+      "effects": [
+        {
+          "bias": 0.017,
+          "conditions": [
+            {
+              "locations": ["cyrea"],
+              "attributes": ["tech", "food"]
+            },
+            {
+              "locations": [],
+              "attributes": ["energy", "metals", "realestate", "money"]
+            }
+          ]
+        }
+      ],
+      "severity": 0.8,
+      "ticker_text": "Cyrea college home to fusion energy tech breakthrough",
+      "broadcaster_text": "A team of researchers at a leading tech university in Cyrea has unveiled a groundbreaking fusion energy technology that harnesses clean, virtually limitless energy through a compact reactor. This innovative development promises to be commercially viable within the next few years, offering a cost-effective alternative to traditional energy sources."
     }
   ],
   "assets": [
@@ -751,7 +861,7 @@
       "symbol": "RTK",
       "name": "RizzTech Innovations",
       "b_price": 25,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Rizzland",
       "attributes": ["tech", "pharma", "food"],
       "flavor_txt": "RizzTech Innovations specializes in cutting-edge technology solutions, focusing on health tech and food production automation."
@@ -761,7 +871,7 @@
       "symbol": "FDP",
       "name": "FreshDelight Produce",
       "b_price": 18,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Rizzland",
       "attributes": ["food", "staples"],
       "flavor_txt": "FreshDelight Produce provides organic fruits and vegetables to local markets, emphasizing sustainability in agriculture."
@@ -771,7 +881,7 @@
       "symbol": "PHR",
       "name": "PharmaHeal Corp",
       "b_price": 30,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Rizzland",
       "attributes": ["pharma"],
       "flavor_txt": "PharmaHeal Corp is at the forefront of biopharmaceuticals, developing innovative treatments for chronic diseases."
@@ -781,7 +891,7 @@
       "symbol": "JMT",
       "name": "Jorga Money Technologies",
       "b_price": 22,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Jorga Union",
       "attributes": ["money", "tech"],
       "flavor_txt": "Jorga Money Technologies revolutionizes personal finance management through innovative software solutions."
@@ -791,7 +901,7 @@
       "symbol": "MED",
       "name": "JorgaMed Pharmaceuticals",
       "b_price": 35,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Jorga Union",
       "attributes": ["pharma", "tech"],
       "flavor_txt": "JorgaMed Pharmaceuticals specializes in developing advanced medications, focusing on affordability and accessibility."
@@ -801,7 +911,7 @@
       "symbol": "STK",
       "name": "StapleTech Inc.",
       "b_price": 15,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Jorga Union",
       "attributes": ["staples", "tech"],
       "flavor_txt": "StapleTech Inc. creates smart kitchen appliances aimed at simplifying food preparation and cooking."
@@ -811,7 +921,7 @@
       "symbol": "EGO",
       "name": "EnergyGlobal",
       "b_price": 28,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Artotska",
       "attributes": ["energy"],
       "flavor_txt": "EnergyGlobal leads in renewable energy solutions, focusing on solar and wind power to reduce carbon footprints."
@@ -821,7 +931,7 @@
       "symbol": "MTC",
       "name": "Metallurgic Tech",
       "b_price": 27,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Artotska",
       "attributes": ["metals"],
       "flavor_txt": "Metallurgic Tech specializes in advanced metal alloys for aerospace and automotive applications."
@@ -831,7 +941,7 @@
       "symbol": "FGR",
       "name": "AgroFresh Foods",
       "b_price": 20,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Artotska",
       "attributes": ["food", "staples"],
       "flavor_txt": "AgroFresh Foods sources and processes agricultural products, ensuring quality and freshness in every bite."
@@ -841,7 +951,7 @@
       "symbol": "SRM",
       "name": "South Rizzland Mining",
       "b_price": 24,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "South Rizzland",
       "attributes": ["metals", "energy"],
       "flavor_txt": "South Rizzland Mining focuses on sustainable mining practices while supplying key minerals for global industries."
@@ -851,7 +961,7 @@
       "symbol": "SFC",
       "name": "Sordland Foods Corp",
       "b_price": 19,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Sordland",
       "attributes": ["food", "staples"],
       "flavor_txt": "Sordland Foods Corp is dedicated to producing high-quality staple foods while championing local farmers."
@@ -861,7 +971,7 @@
       "symbol": "MET",
       "name": "Sordland Metals Ltd.",
       "b_price": 32,
-      "sigma": 0.0012,
+      "sigma": 0.012,
       "location": "Sordland",
       "attributes": ["metals"],
       "flavor_txt": "Sordland Metals Ltd. supplies various metal products to the construction and manufacturing sectors."
@@ -871,7 +981,7 @@
       "symbol": "SOL",
       "name": "SolarWave Energy",
       "b_price": 26,
-      "sigma": 0.0092,
+      "sigma": 0.092,
       "location": "Sordland",
       "attributes": ["energy"],
       "flavor_txt": "SolarWave Energy develops solar panel technology aimed at making renewable energy accessible for all."
@@ -881,7 +991,7 @@
       "symbol": "CTY",
       "name": "CyreaTech Solutions",
       "b_price": 23,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Cyrea",
       "attributes": ["tech", "staples"],
       "flavor_txt": "CyreaTech Solutions designs smart home technologies that integrate seamlessly with daily living."
@@ -891,7 +1001,7 @@
       "symbol": "FST",
       "name": "Cyrea Fresh Staples",
       "b_price": 15,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Cyrea",
       "attributes": ["food", "staples"],
       "flavor_txt": "Cyrea Fresh Staples focuses on delivering fresh produce and grocery essentials to urban areas."
@@ -901,7 +1011,7 @@
       "symbol": "CYP",
       "name": "Cyrea Pharma Labs",
       "b_price": 34,
-      "sigma": 0.0092,
+      "sigma": 0.092,
       "location": "Cyrea",
       "attributes": ["pharma"],
       "flavor_txt": "Cyrea Pharma Labs is dedicated to research and development of innovative healthcare solutions."
@@ -911,7 +1021,7 @@
       "symbol": "KLE",
       "name": "Kolechia Luxuries",
       "b_price": 40,
-      "sigma": 0.013,
+      "sigma": 0.13,
       "location": "Kolechia",
       "attributes": ["lux", "pharma"],
       "flavor_txt": "Kolechia Luxuries offers high-end consumer products, ranging from designer items to exclusive skincare lines."
@@ -921,7 +1031,7 @@
       "symbol": "ENER",
       "name": "Kolechia Energy Corp",
       "b_price": 29,
-      "sigma": 0.0092,
+      "sigma": 0.092,
       "location": "Kolechia",
       "attributes": ["energy"],
       "flavor_txt": "Kolechia Energy Corp specializes in innovative energy solutions, focusing on eco-friendly technologies."
@@ -931,7 +1041,7 @@
       "symbol": "LUX",
       "name": "Luxury Essence",
       "b_price": 50,
-      "sigma": 0.013,
+      "sigma": 0.13,
       "location": "Kolechia",
       "attributes": ["lux"],
       "flavor_txt": "Luxury Essence crafts premium goods, ensuring quality and elegance in every product they offer."
@@ -941,7 +1051,7 @@
       "symbol": "MNY",
       "name": "Sealand Money Group",
       "b_price": 21,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Sealand",
       "attributes": ["money"],
       "flavor_txt": "Sealand Money Group provides innovative financial services, helping clients manage wealth effectively."
@@ -951,7 +1061,7 @@
       "symbol": "LUXE",
       "name": "Sealand Luxuries Inc.",
       "b_price": 45,
-      "sigma": 0.013,
+      "sigma": 0.13,
       "location": "Sealand",
       "attributes": ["lux"],
       "flavor_txt": "Sealand Luxuries Inc. specializes in exclusive luxury goods, focusing on handcrafted items for discerning consumers."
@@ -961,7 +1071,7 @@
       "symbol": "FOO",
       "name": "Sealand Culinary Arts",
       "b_price": 22,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Sealand",
       "attributes": ["food"],
       "flavor_txt": "Sealand Culinary Arts promotes gourmet food experiences through restaurants and specialty food products."
@@ -971,7 +1081,7 @@
       "symbol": "FMD",
       "name": "FreshMed Distributors",
       "b_price": 16,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Rizzland",
       "attributes": ["food", "staples"],
       "flavor_txt": "FreshMed Distributors ensures the supply of fresh medical and dietary food products to healthcare facilities."
@@ -981,7 +1091,7 @@
       "symbol": "AGR",
       "name": "Agritech Solutions",
       "b_price": 27,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Artotska",
       "attributes": ["tech", "food"],
       "flavor_txt": "Agritech Solutions develops innovative farming technologies to boost agricultural productivity sustainably."
@@ -991,7 +1101,7 @@
       "symbol": "METL",
       "name": "MetalWorks Inc.",
       "b_price": 33,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "South Rizzland",
       "attributes": ["metals"],
       "flavor_txt": "MetalWorks Inc. is a leading manufacturer of precision metal components for various industries."
@@ -1001,7 +1111,7 @@
       "symbol": "STN",
       "name": "StapleTech Network",
       "b_price": 24,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "South Rizzland",
       "attributes": ["staples", "food"],
       "flavor_txt": "StapleTech Network provides essential food products and staple goods to consumers and businesses alike."
@@ -1011,7 +1121,7 @@
       "symbol": "SOIL",
       "name": "Sustainable Soil Corp",
       "b_price": 19,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "South Rizzland",
       "attributes": ["food"],
       "flavor_txt": "Sustainable Soil Corp focuses on enhancing soil health through organic products and practices."
@@ -1021,7 +1131,7 @@
       "symbol": "CIR",
       "name": "CyrEnergy Corp",
       "b_price": 25,
-      "sigma": 0.0092,
+      "sigma": 0.092,
       "location": "Cyrea",
       "attributes": ["energy"],
       "flavor_txt": "CyrEnergy Corp specializes in energy-efficient solutions, leading the charge in renewable energy adoption."
@@ -1031,7 +1141,7 @@
       "symbol": "PHC",
       "name": "Pharmaceutical Corp",
       "b_price": 38,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Cyrea",
       "attributes": ["pharma"],
       "flavor_txt": "Pharmaceutical Corp develops life-saving drugs with a focus on patient-centered healthcare."
@@ -1041,7 +1151,7 @@
       "symbol": "XLR",
       "name": "Kolechia Express Logistics",
       "b_price": 22,
-      "sigma": 0.006,
+      "sigma": 0.06,
       "location": "Kolechia",
       "attributes": ["comms"],
       "flavor_txt": "Kolechia Express Logistics offers reliable logistics solutions, ensuring timely delivery of goods."
@@ -1051,7 +1161,7 @@
       "symbol": "MST",
       "name": "Minescape Tech",
       "b_price": 30,
-      "sigma": 0.012,
+      "sigma": 0.12,
       "location": "Sordland",
       "attributes": ["metals", "energy"],
       "flavor_txt": "Minescape Tech specializes in innovative technologies for mining and resource extraction."
@@ -1061,7 +1171,7 @@
       "symbol": "TECH",
       "name": "TechNova Solutions",
       "b_price": 40,
-      "sigma": 0.013,
+      "sigma": 0.13,
       "location": "Jorga Union",
       "attributes": ["tech"],
       "flavor_txt": "TechNova Solutions develops software solutions that streamline business processes across various sectors."
@@ -1071,7 +1181,7 @@
       "symbol": "INNOV",
       "name": "Innovative Foods Ltd.",
       "b_price": 18,
-      "sigma": 0.006,
+      "sigma": 0.06,
       "location": "Artotska",
       "attributes": ["food"],
       "flavor_txt": "Innovative Foods Ltd. focuses on developing new food products that cater to health-conscious consumers."
@@ -1081,7 +1191,7 @@
       "symbol": "CLOU",
       "name": "CloudCure Pharma",
       "b_price": 35,
-      "sigma": 0.008,
+      "sigma": 0.08,
       "location": "Jorga Union",
       "attributes": ["pharma"],
       "flavor_txt": "CloudCure Pharma is dedicated to pioneering cloud-based health solutions for modern medical practices."
@@ -1091,7 +1201,7 @@
       "symbol": "GRND",
       "name": "Green Energy Solutions",
       "b_price": 29,
-      "sigma": 0.007,
+      "sigma": 0.07,
       "location": "Kolechia",
       "attributes": ["energy"],
       "flavor_txt": "Green Energy Solutions focuses on providing cutting-edge renewable energy technologies for residential and commercial use."
@@ -1101,7 +1211,7 @@
       "symbol": "FASH",
       "name": "Fashion Luxe Co.",
       "b_price": 50,
-      "sigma": 0.007,
+      "sigma": 0.07,
       "location": "Sealand",
       "attributes": ["lux"],
       "flavor_txt": "Fashion Luxe Co. offers premium fashion products and bespoke designs for the luxury market."
@@ -1111,7 +1221,7 @@
       "symbol": "MFL",
       "name": "MetalFlex Industries",
       "b_price": 31,
-      "sigma": 0.01,
+      "sigma": 0.1,
       "location": "Artotska",
       "attributes": ["metals"],
       "flavor_txt": "MetalFlex Industries specializes in flexible metal manufacturing solutions for various industrial applications."
@@ -1121,7 +1231,7 @@
       "symbol": "RZC",
       "name": "RizzCoin",
       "b_price": 1.25,
-      "sigma": 0.03,
+      "sigma": 0.3,
       "location": "",
       "attributes": ["money", "tech"],
       "flavor_txt": "RizzCoin is designed for seamless transactions within the digital economy, facilitating fast and secure payments for various goods and services."
@@ -1131,7 +1241,7 @@
       "symbol": "ZAZ",
       "name": "ZazzCoin",
       "b_price": 1.5,
-      "sigma": 0.03,
+      "sigma": 0.3,
       "location": "Rizzland",
       "attributes": ["money", "lux"],
       "flavor_txt": "ZazzCoin offers enhanced features for luxury transactions, making it the preferred choice for high-end purchases in the digital marketplace."
@@ -1141,7 +1251,7 @@
       "symbol": "BIZZ",
       "name": "BizzCoin",
       "b_price": 1.75,
-      "sigma": 0.03,
+      "sigma": 0.3,
       "location": "Rizzland",
       "attributes": ["money", "business"],
       "flavor_txt": "BizzCoin is tailored for small and medium-sized enterprises, streamlining payments and enhancing business operations in the digital realm."
@@ -1151,7 +1261,7 @@
       "symbol": "FOOD",
       "name": "Food Index",
       "b_price": 3.12,
-      "sigma": 0.003,
+      "sigma": 0.03,
       "location": "",
       "attributes": ["food"],
       "flavor_txt": "The Food Index is a ticker that tracks the overall health of the agricultural industry worldwide."
@@ -1161,7 +1271,7 @@
       "symbol": "REM",
       "name": "Rare Earth Metal Index",
       "b_price": 32,
-      "sigma": 0.002,
+      "sigma": 0.02,
       "location": "",
       "attributes": ["metals"],
       "flavor_txt": "The Rare Earth Metal index is a ticker that forecasts the current/future status of the rare earth metal industry globally."
@@ -1171,7 +1281,7 @@
       "symbol": "GENI",
       "name": "Global Energy Index",
       "b_price": 83,
-      "sigma": 0.005,
+      "sigma": 0.05,
       "location": "",
       "attributes": ["energy"],
       "flavor_txt": "The Global Energy Index tracks the cumulative health of energy corporations globally."

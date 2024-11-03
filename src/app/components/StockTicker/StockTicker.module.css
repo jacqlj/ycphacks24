@@ -1,0 +1,15 @@
+.ticker {
+
+  width: 6rem;
+  height: 100%;
+  display: flex;
+  column-gap: 1rem;
+
+
+}
+
+.symbol {
+
+  font-size: 1.5rem;
+
+}

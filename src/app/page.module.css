@@ -25,12 +25,17 @@
   font-family: var(--font-geist-sans);
 }
 
+.page>* {
+  overflow: scroll;
+}
+
 .stock_ticker {
   grid-area: a;
 }
 
 .function_panel {
   grid-area: b;
+  position: relative;
 }
 
 .news {

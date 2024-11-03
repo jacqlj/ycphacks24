@@ -1,19 +1,40 @@
+.container {
+  display: grid;
+  grid: auto auto / 1fr;
+}
+
+.modeContainer {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .mode {
   display: grid;
-  grid: repeat(2, auto) / 7fr 6fr 7fr 8fr 9fr;
+  height: 5rem;
+  grid: repeat(2, auto) / 6fr 6fr 7fr 8fr 9fr;
   column-gap: 0.5rem;
-
   padding: 1rem 1.5rem;
   background-color: color-mix(in oklch, var(--background), #fff 20%);
-  margin-bottom: 1rem;
 }
 
 .mode span {
   text-align: center;
+  line-height: 1.5rem;
+}
+
+.border {
+  height: 1rem;
+  background-color: var(--background);
+}
+
+.sell {
+  box-shadow: inset 0 0 10px;
 }
 
 .label {
   font-weight: bolder;
+  text-align: left !important;
 }
 
 .button:hover,
@@ -25,6 +46,11 @@
   background-color: var(--foreground);
   color: var(--background);
   font-weight: bolder;
+}
+
+.menu {
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .category {

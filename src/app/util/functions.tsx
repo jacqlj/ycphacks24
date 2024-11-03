@@ -1,4 +1,4 @@
-import { GameAsset, GameAssetEffect, GameEffectCondition, GameEvent, GameState } from './structs';
+import { GameAsset, GameAssetEffect, GameAssetTemplate, GameEffectCondition, GameEvent, GameState } from './structs';
 
 import { gamma } from 'mathjs';
 
@@ -7,7 +7,7 @@ export function step_time(events: GameEvent[], state: GameState): GameEvent {
   norm_dist.seed = Date.now();
 
   // update asset prices
-  state.assets.forEach((asset) => update_asset(asset, norm_dist));
+  state.assets.forEach((asset) => update_asset(asset));
 
   // update game statistics exposed to player
 
@@ -24,7 +24,7 @@ export function step_time(events: GameEvent[], state: GameState): GameEvent {
  * Updates an asset's price when `step_time` is evaluated.
  * @param {GameAsset} asset - The asset with which the price is to be updated.
  */
-export function update_asset(asset: GameAsset, shift: boolean = true): void {
+function update_asset(asset: GameAsset): void {
   const mu =
     1 +
     asset.effects.reduce((sum, effect) => {
@@ -35,8 +35,20 @@ export function update_asset(asset: GameAsset, shift: boolean = true): void {
   const sigma = asset.sigma;
   const new_price = asset.price * gaussianRandom(mu, sigma);
   asset.price = new_price;
-  if (shift) asset.price_hist.shift();
-  asset.price_hist.push(new_price);
+  asset.price_hist_24h.shift();
+  asset.price_hist_24h.push(new_price);
+}
+
+export function init_price_history_24h(asset: GameAssetTemplate): number[] {
+  const sigma = asset.sigma;
+  const price_history: number[] = [];
+  let price = asset.b_price;
+  for (let index = 0; index < 23; index++) {
+    price *= gaussianRandom(1, sigma);
+    price_history.push(price);
+  }
+  price_history.push(asset.b_price);
+  return price_history;
 }
 
 function gaussianRandom(mu = 0, sigma = 1): number {
@@ -110,4 +122,13 @@ export function get_date_from_time(time: number) {
   }).format(date);
 }
 
-export function format_currency(value: number) {}
+export function format_number(n: number) {
+  if (n < 10 ** 6) return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  if (n < 10 ** 9) return (n / 10 ** 6).toFixed(1) + ' mil';
+  if (n < 10 ** 12) return (n / 10 ** 9).toFixed(1) + ' bil';
+  return (n / 10 ** 12).toFixed(1) + ' tr';
+}
+
+export function asset_daily_return(price_hist_24h: number[]) {
+  return (Math.abs(price_hist_24h[price_hist_24h.length - 1] - price_hist_24h[0]) / price_hist_24h[0]) * 100;
+}

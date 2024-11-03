@@ -20,7 +20,7 @@
 
 .bottomcontainer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   column-gap: 1rem;
 }
 
@@ -30,7 +30,6 @@
 }
 
 .capitaltext {
-
   text-align: right;
   font-weight: bolder;
 

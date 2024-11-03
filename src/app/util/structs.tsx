@@ -19,7 +19,9 @@ export interface GameAsset {
   name: string;
   quantity: number;
   price: number;
-  price_hist: number[];
+  price_hist_24h: number[];
+  price_hist_30d: number[];
+  average_cost: number;
   effects: GameAssetEffect[];
   sigma: number;
   category: string;
